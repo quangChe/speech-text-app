@@ -65,8 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\KKSpeechRecognizer\Example\RecordingCanvas.cs" />
     <Compile Include="Assets\KKSpeechRecognizer\Example\SpeechRecognitionLanguageDropdown.cs" />
-    <Compile Include="Assets\KKSpeechRecognizer\SpeechRecognizer.cs" />
-    <Compile Include="Assets\KKSpeechRecognizer\SpeechRecognizerListener.cs" />
+    <Compile Include="Assets\Scripts\STT\SpeechRecognizer.cs" />
+    <Compile Include="Assets\Scripts\STT\SpeechRecognizerListener.cs" />
     <Compile Include="Assets\Scripts\TTS\Singleton.cs" />
     <Compile Include="Assets\Scripts\TTS\TTSComponent.cs" />
     <Compile Include="Assets\Scripts\TTS\TextToSpeech.cs" />

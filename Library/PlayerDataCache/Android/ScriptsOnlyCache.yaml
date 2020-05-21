@@ -297,12 +297,6 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 084698e64d49bbe121b2b7afe0ffeafc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DemoScript
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -327,7 +321,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 62aa42c14abd7b87ba4f2dad524562b6
+      Hash: fa0f9cb327b1d00aa573b57994181aa4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TTSComponent

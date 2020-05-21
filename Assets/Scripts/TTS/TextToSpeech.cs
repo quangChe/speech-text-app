@@ -123,13 +123,13 @@ public class TextToSpeech : Singleton<TextToSpeech>
     /// <param name="toSpeak">The text to speak.</param>
     public void Speak(string toSpeak)
     {
+
         if (ttsEngine == null)
         {
             throw TTSUninitializedError();           
         }
 
         ttsEngine.Call("Speak", toSpeak);
-
     }
 
 
