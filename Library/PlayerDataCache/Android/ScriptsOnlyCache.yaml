@@ -297,6 +297,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 084698e64d49bbe121b2b7afe0ffeafc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DemoScript
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -517,6 +523,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: KKSpeech
+    className: SpeechRecognitionLanguageDropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 08e7938ae9f478011e4981bbaf16e8a3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: KKSpeech
+    className: SpeechRecognizerListener
+  - hash:
+      serializedVersion: 2
+      Hash: 74b7a3bd47f0884b3138d3f65157376b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RecordingCanvas
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

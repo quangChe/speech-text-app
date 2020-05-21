@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -47,9 +48,8 @@ public class TextToSpeech : Singleton<TextToSpeech>
     public float volume     { private set; get; }
                                                     /// <summary> The delegate template for error callbacks. </summary>
     public delegate void OnErrorCallbackHandler(string error);
-
-
-    public static new TextToSpeech instance
+                                                    /// <summary> The instance of the TextToSpeech engine. This is the gateway through which all functionality of the TextToSpeech API can be accessed.</summary>
+    public static TextToSpeech Instance
     {
         get
         {
@@ -78,7 +78,8 @@ public class TextToSpeech : Singleton<TextToSpeech>
     private OnErrorCallbackHandler errorCallback;
     private string toastLength;
     private TextToSpeech baseInstance;
-
+    private Action<bool, string> FileSynthesisResultCallback;
+    private string audioFilePath;
 
     #endregion DATA_STRUCTURES
 
@@ -425,6 +426,44 @@ public class TextToSpeech : Singleton<TextToSpeech>
 
 
     /// <summary>
+    /// Synthesizes the given text to an audio file. The audio file is by default saved to "Application.persistentDataPath". If you're sure about the path then you can pass in the path as the last argument
+    /// </summary>
+    /// <param name="textToSynthesize">The text that will be synthesized to the audio file.</param>
+    /// <param name="fileName">The name of the generated audio file. THe file name should be without nay extension.</param>
+    /// <param name="Result">This method will be called with two parameters, the first one denotes whether the operation was successfull and the second one is the fully qualified path where the audio file was saved (or failed to save).</param>
+    /// <param name="path"> The path where the generated audio file will be saved. If this argument is not passed then the file will be saved in the path given by "Application.persistentDataPath".</param>
+    public void SynthesizeToFile(string textToSynthesize, string fileName, Action<bool, string> Result, string path = "")
+    {
+        if (ttsEngine == null)
+        {
+            throw TTSUninitializedError();
+        }
+
+        string basePath = IsNullOrAllSpaces(path) ? Application.persistentDataPath : path;
+
+        if(basePath.EndsWith("/") || basePath.EndsWith("\\"))
+        {
+            basePath = basePath.Remove(basePath.Length - 1, 1);
+        }
+
+        if (basePath.StartsWith("/") || basePath.StartsWith("\\"))
+        {
+            basePath = basePath.Remove(0, 1);
+        }
+
+        if (fileName.Contains('.')) { fileName = fileName.Split('.')[0]; }
+
+        string fullyQualifiedPath = basePath + "/" + fileName + ".wav";
+
+        ttsEngine.Call("SynthesizeToFile", textToSynthesize, fullyQualifiedPath, gameObject.name, "ReturnFileSynthesisResult");
+
+        FileSynthesisResultCallback = Result;
+        audioFilePath = fullyQualifiedPath;
+    }
+
+
+
+    /// <summary>
     /// Register callback methods for various events regarding speech synthesis. Please note that you can't register multiple methods to receive the same callback. Calling this function with new set of methods will cause previous registered methods to unregister against the callbacks.
     /// </summary>
     /// <param name="callbackObject">  The gameObject with the script containing the callback methods.</param>
@@ -550,6 +589,31 @@ public class TextToSpeech : Singleton<TextToSpeech>
         Toast(message, ToastLength.LENGTH_LONG);
         return new InvalidOperationException("Please initialize the TTS engine prior to performing any actions or changing the settings");
     }
+
+
+    private bool IsNullOrAllSpaces(string toCheck)
+    {
+        return ( (toCheck != null) && (toCheck.All(c => c.Equals(' '))) );
+    }
+
+
+    private void ReturnFileSynthesisResult(string result)
+    {
+        if(result.ToLower() == "false" && FileSynthesisResultCallback != null)
+        {
+            FileSynthesisResultCallback.Invoke(false, audioFilePath);
+        }
+        else if(FileSynthesisResultCallback != null)
+        {
+            FileSynthesisResultCallback.Invoke(true, audioFilePath);
+        }
+
+
+        FileSynthesisResultCallback = null;
+        audioFilePath = null;
+
+    }
+
 
 
     #endregion PRIVATE_METHODS

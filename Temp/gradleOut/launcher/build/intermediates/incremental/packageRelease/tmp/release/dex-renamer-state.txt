@@ -1,0 +1,4 @@
+#Thu May 21 09:21:13 PDT 2020
+base.0=/Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex

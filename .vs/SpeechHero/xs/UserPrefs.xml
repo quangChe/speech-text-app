@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/STT/SpeechRecognizerListener.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TTS/TTSComponent.cs">
     <Files>
       <File FileName="Assets/Scripts/Singleton.cs" Line="34" Column="36" />
       <File FileName="Assets/Scripts/TextToSpeech.cs" Line="58" Column="8" />
       <File FileName="Assets/Scripts/TTSComponent.cs" Line="30" Column="12" />
-      <File FileName="Assets/KKSpeechRecognizer/Example/RecordingCanvas.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/STT/SpeechRecognizer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/STT/SpeechRecognizerListener.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

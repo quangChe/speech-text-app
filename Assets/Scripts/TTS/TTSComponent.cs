@@ -24,9 +24,9 @@ public class TTSComponent : MonoBehaviour
         string line = inputText.text;
         Debug.Log("***********" + line + "***********");
 
-        //if (Application.platform == RuntimePlatform.Android && line.Length > 0)
-        //{
-        //    TextToSpeech.instance.Speak(line);
-        //}
+        if (Application.platform == RuntimePlatform.Android && line.Length > 0)
+        {
+            TextToSpeech.instance.Speak(line);
+        }
     }
 }
