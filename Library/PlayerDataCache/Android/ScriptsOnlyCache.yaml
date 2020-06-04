@@ -1,8 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - TTSComponent
-    - TextToSpeech
+    - KKSpeech.SpeechRecognizerListener
+    - RecordingCanvas
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -28,10 +28,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/KKSpeechRecognizer/Example/ExampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -49,26 +48,26 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 11156}
     - Class: 114
-      Script: {instanceID: 11322}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11362}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11776}
+      Script: {instanceID: 11784}
     - Class: 114
-      Script: {instanceID: 12188}
+      Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 12228}
+      Script: {instanceID: 12580}
     - Class: 114
-      Script: {instanceID: 12388}
+      Script: {instanceID: 12714}
     - Class: 114
-      Script: {instanceID: 12554}
+      Script: {instanceID: 12718}
     - Class: 114
-      Script: {instanceID: 12700}
-    - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 13102}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 124
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -321,7 +320,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: fa0f9cb327b1d00aa573b57994181aa4
+      Hash: 62aa42c14abd7b87ba4f2dad524562b6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TTSComponent
@@ -375,6 +374,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: KKSpeech
+    className: SpeechRecognitionLanguageDropdown
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -385,6 +390,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TextToSpeech
+  - hash:
+      serializedVersion: 2
+      Hash: 08e7938ae9f478011e4981bbaf16e8a3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: KKSpeech
+    className: SpeechRecognizerListener
   - hash:
       serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
@@ -403,6 +414,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 74b7a3bd47f0884b3138d3f65157376b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RecordingCanvas
   - hash:
       serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
@@ -517,25 +534,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: KKSpeech
-    className: SpeechRecognitionLanguageDropdown
-  - hash:
-      serializedVersion: 2
-      Hash: 08e7938ae9f478011e4981bbaf16e8a3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: KKSpeech
-    className: SpeechRecognizerListener
-  - hash:
-      serializedVersion: 2
-      Hash: 74b7a3bd47f0884b3138d3f65157376b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RecordingCanvas
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/KKSpeechRecognizer/Example/ExampleScene.unity
   playerPath: /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Builds/android_build.apk
