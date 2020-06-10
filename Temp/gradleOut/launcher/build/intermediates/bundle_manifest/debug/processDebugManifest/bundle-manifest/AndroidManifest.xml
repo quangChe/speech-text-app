@@ -24,6 +24,13 @@
     <uses-feature
         android:name="android.hardware.vulkan.version"
         android:required="false" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
@@ -72,7 +79,7 @@
             android:value="portrait|landscape" />
         <meta-data
             android:name="unity.build-id"
-            android:value="d6450700-706d-4c9b-8830-7c0ef6cde24a" />
+            android:value="8b450384-bf26-41fb-b06a-8876c8150c59" />
     </application>
 
 </manifest>

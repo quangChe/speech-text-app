@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - KKSpeech.SpeechRecognizerListener
+    - MicrophoneComponent
     - STTComponent
     - TTSComponent
     - TextToSpeech
@@ -48,6 +49,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -74,6 +77,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12718}
     - Class: 114
       Script: {instanceID: 13102}
+    - Class: 114
+      Script: {instanceID: 20464}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -547,6 +552,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RecordingCanvas
+  - hash:
+      serializedVersion: 2
+      Hash: fafbd4860b00bc2fc8585eac54673060
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MicrophoneComponent
   platform: 13
   scenePathNames:
   - Assets/Scenes/GameScene.unity

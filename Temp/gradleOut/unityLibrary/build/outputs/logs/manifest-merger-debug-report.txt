@@ -1,25 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-24:12
+ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:70-98
 		INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
 		INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
-		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-27:12
 		INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:99-145
 	android:versionCode
 		INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
-		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:1-27:12
 		INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:2:11-69
@@ -103,24 +103,38 @@ ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibr
 		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:20:64-88
 	android:name
 		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:20:17-63
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:3-78
+	android:name
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:20-75
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:3-66
+	android:name
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:20-63
+uses-feature#android.hardware.microphone
+ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:3-87
+	android:required
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:60-84
+	android:name
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:17-59
 uses-feature#android.hardware.touchscreen
-ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:3-88
+ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:24:3-88
 	android:required
-		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:61-85
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:24:61-85
 	android:name
-		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:21:17-60
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:24:17-60
 uses-feature#android.hardware.touchscreen.multitouch
-ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:3-99
+ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:25:3-99
 	android:required
-		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:72-96
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:25:72-96
 	android:name
-		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:22:17-71
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:25:17-71
 uses-feature#android.hardware.touchscreen.multitouch.distinct
-ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:3-108
+ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:26:3-108
 	android:required
-		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:81-105
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:26:81-105
 	android:name
-		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:23:17-80
+		ADDED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:26:17-80
 uses-sdk
 INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml

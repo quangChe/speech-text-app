@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\TTS\Singleton.cs" />
     <Compile Include="Assets\Scripts\TTS\TTSComponent.cs" />
     <Compile Include="Assets\Scripts\TTS\TextToSpeech.cs" />
+    <Compile Include="Assets\SpeechComponents.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/q/Desktop/FlintRehab/Unity/SpeechHero/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

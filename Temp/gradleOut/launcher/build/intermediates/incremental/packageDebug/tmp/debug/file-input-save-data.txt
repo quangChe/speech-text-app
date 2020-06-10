@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jun 09 16:32:56 PDT 2020
+#Wed Jun 10 11:02:07 PDT 2020
 2.path=bin/Data/Managed/UnityEngine.TilemapModule.dll
 14.set=ASSET
 107.baseType=DIRECTORY
