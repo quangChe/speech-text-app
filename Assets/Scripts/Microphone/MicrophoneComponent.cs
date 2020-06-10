@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MicrophoneComponent : MonoBehaviour
 {
@@ -9,6 +9,8 @@ public class MicrophoneComponent : MonoBehaviour
 
     public static float MicLoudness;
     public static float MicLoudnessinDecibels;
+
+    public Text decibalText;
 
     private AudioClip audioClip;
     private AudioClip recordedClip;
@@ -25,6 +27,7 @@ public class MicrophoneComponent : MonoBehaviour
     void Update()
     {
         MicLoudness = MicrophoneLevelMax();
+        decibalText.text = MicLoudness.ToString() + " db";
     }
 
     public void StartMic()
@@ -60,7 +63,10 @@ public class MicrophoneComponent : MonoBehaviour
                 levelMax = wavePeak;
             }
         }
-        return levelMax;
+
+        float decibels = (20 * Mathf.Log10(Mathf.Abs(levelMax)));
+
+        return decibels;
     }
 
     // Disable any background running recording;
