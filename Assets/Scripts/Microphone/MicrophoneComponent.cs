@@ -80,4 +80,23 @@ public class MicrophoneComponent : MonoBehaviour
         StopMic();
     }
 
+    // Cut off mic if user closes app
+    void OnApplicationFocus(bool focus)
+    {
+        if (focus)
+        {
+            if (isRecording)
+            {
+                StartMic();
+                isRecording = true;
+            }
+        }
+        if (!focus)
+        {
+            StopMic();
+            isRecording = false;
+
+        }
+    }
+
 }
