@@ -1,23 +1,26 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TTS/Singleton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Microphone/Microphone.cs">
     <Files>
       <File FileName="Assets/Scripts/STT/SpeechRecognizer.cs" Line="8" Column="19" />
-      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" />
+      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
       <File FileName="Assets/Scripts/TTS/TTSComponent.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/STT/SpeechRecognizerListener.cs" Line="101" Column="4" />
-      <File FileName="Assets/Scripts/STT/STTComponent.cs" Line="25" Column="55" />
-      <File FileName="Assets/Scripts/TTS/TextToSpeech.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/STT/SpeechRecognizerListener.cs" Line="23" Column="1" />
+      <File FileName="Assets/Scripts/STT/STTComponent.cs" Line="13" Column="43" />
+      <File FileName="Assets/Scripts/TTS/TextToSpeech.cs" Line="87" Column="3" />
       <File FileName="Assets/Scripts/TTS/Singleton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Microphone/Microphone.cs" Line="4" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SpeechHero" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Plugins" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="STT" expanded="True">
-                  <Node name="STTComponent.cs" selected="True" />
+                <Node name="Microphone" expanded="True">
+                  <Node name="Microphone.cs" selected="True" />
                 </Node>
+                <Node name="STT" expanded="True" />
                 <Node name="TTS" expanded="True" />
               </Node>
             </Node>
