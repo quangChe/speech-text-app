@@ -386,12 +386,6 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: KKSpeech
-    className: SpeechRecognitionLanguageDropdown
-  - hash:
-      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -548,16 +542,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 74b7a3bd47f0884b3138d3f65157376b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RecordingCanvas
-  - hash:
-      serializedVersion: 2
-      Hash: fafbd4860b00bc2fc8585eac54673060
+      Hash: ba309c660cb650c78708365f8d0a6c0d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MicrophoneComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpeechComponents
   platform: 13
   scenePathNames:
   - Assets/Scenes/GameScene.unity

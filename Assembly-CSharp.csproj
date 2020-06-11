@@ -63,8 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\KKSpeechRecognizer\Example\RecordingCanvas.cs" />
-    <Compile Include="Assets\KKSpeechRecognizer\Example\SpeechRecognitionLanguageDropdown.cs" />
     <Compile Include="Assets\Scripts\Microphone\MicrophoneComponent.cs" />
     <Compile Include="Assets\Scripts\STT\STTComponent.cs" />
     <Compile Include="Assets\Scripts\STT\SpeechRecognizer.cs" />

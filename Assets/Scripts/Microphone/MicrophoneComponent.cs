@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MicrophoneComponent : MonoBehaviour
 {
+    public Button micButton;
+
     private string microphone = null;
 
     public static float MicLoudness;
@@ -18,16 +20,35 @@ public class MicrophoneComponent : MonoBehaviour
     int audioSampleWindow = 128;
 
 
-    void OnEnable()
+    //void OnEnable()
+    //{
+    //    StartMic();
+    //}
+
+    private void Start()
     {
-        StartMic();
+        micButton.onClick.AddListener(() => ToggleMicrophone());
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         MicLoudness = MicrophoneLevelMax();
         decibalText.text = MicLoudness.ToString() + " db";
+    }
+
+    private void ToggleMicrophone()
+    {
+        if (isRecording)
+        {
+            StopMic();
+            micButton.GetComponentInChildren<Text>().text = "Start Mic";
+        }
+        else
+        {
+            StartMic();
+            micButton.GetComponentInChildren<Text>().text = "Stop Mic";
+        }
     }
 
     public void StartMic()
