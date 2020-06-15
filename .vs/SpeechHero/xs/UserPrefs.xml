@@ -10,28 +10,10 @@
       <File FileName="Assets/Scripts/TTS/Singleton.cs" />
       <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" Line="8" Column="14" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SpeechHero" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Plugins" expanded="True" />
-              <Node name="Scripts" expanded="True">
-                <Node name="Microphone" expanded="True">
-                  <Node name="MicrophoneComponent.cs" selected="True" />
-                </Node>
-                <Node name="STT" expanded="True" />
-                <Node name="TTS" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="31da86bc-efeb-4e03-9544-332716be3b14" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="51d29950-9899-4008-aa24-88c2c0a76c18" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
