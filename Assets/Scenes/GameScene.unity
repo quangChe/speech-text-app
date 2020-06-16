@@ -902,6 +902,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1717548033}
+  - component: {fileID: 1717548035}
+  - component: {fileID: 1717548034}
   m_Layer: 5
   m_Name: SlidingWord
   m_TagString: Untagged
@@ -927,6 +929,39 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 68.1, y: 0.00000066124}
+  m_AnchoredPosition: {x: 57, y: 0}
   m_SizeDelta: {x: 250, y: 476.3}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!50 &1717548034
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717548032}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!114 &1717548035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717548032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717a41772bf3046dbbacf46fa6d429b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
