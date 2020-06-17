@@ -7,15 +7,18 @@ public class TappingMotion : MonoBehaviour
     public GameObject[] path;
     public AudioSource drumSound;
 
-    private void Start()
+    private void Update()
     {
-        StartCoroutine(AnimateTapping());
+        if (Input.GetKeyDown("t"))
+        {
+            StartCoroutine(AnimateTapping());
+        }
     }
 
     public IEnumerator AnimateTapping()
     {
         yield return StartCoroutine(HandDownMotion());
-        StartCoroutine(HandUpMotion());
+        yield return StartCoroutine(HandUpMotion());
     }
 
     private IEnumerator HandDownMotion()
@@ -25,9 +28,7 @@ public class TappingMotion : MonoBehaviour
         while (i < path.Length)
         {
             transform.position = Vector3.MoveTowards(transform.position,
-                path[i].transform.position, Time.deltaTime * 10);
-
-            transform.Rotate(0, 0, -0.75f);
+                path[i].transform.position, Time.deltaTime * 15);
 
             if (transform.position == path[i].transform.position) i++;
 
@@ -45,9 +46,7 @@ public class TappingMotion : MonoBehaviour
         while (i >= 0)
         {
             transform.position = Vector3.MoveTowards(transform.position,
-                path[i].transform.position, Time.deltaTime * 10);
-
-            transform.Rotate(0, 0, 0.75f);
+                path[i].transform.position, Time.deltaTime * 15);
 
             if (transform.position == path[i].transform.position) i--;
 
