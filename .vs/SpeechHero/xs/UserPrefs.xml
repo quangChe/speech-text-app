@@ -9,7 +9,7 @@
       <File FileName="Assets/Scripts/TTS/Singleton.cs" />
       <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" />
       <File FileName="Assets/Scripts/GamePhysics/SlidingMotion.cs" />
-      <File FileName="Assets/Scripts/GamePhysics/TappingMotion.cs" Line="17" Column="16" />
+      <File FileName="Assets/Scripts/GamePhysics/TappingMotion.cs" Line="40" Column="40" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
