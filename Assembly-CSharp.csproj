@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GamePhysics\SlidingMotion.cs" />
+    <Compile Include="Assets\Scripts\GamePhysics\TappingMotion.cs" />
     <Compile Include="Assets\Scripts\Microphone\MicrophoneComponent.cs" />
     <Compile Include="Assets\Scripts\STT\STTComponent.cs" />
     <Compile Include="Assets\Scripts\STT\SpeechRecognizer.cs" />
