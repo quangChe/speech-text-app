@@ -4,16 +4,50 @@ using UnityEngine;
 
 public class TappingMotion : MonoBehaviour
 {
+    public GameObject[] path;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        StartCoroutine(TapDown());
+        StartCoroutine(AnimateTap());
     }
 
-    // Update is called once per frame
-    IEnumerator TapDown()
+    public IEnumerator AnimateTap()
     {
+        int i = 0;
 
+        while (i < path.Length)
+        {
+            transform.position = Vector3.MoveTowards(
+                          transform.position,
+                          path[i].transform.position,
+                          Time.deltaTime * 10
+                       );
+
+            transform.Rotate(0, 0, -0.5f);
+
+            if (transform.position == path[i].transform.position)
+                i++;
+
+            yield return null;
+        }
+
+        i = path.Length - 1;
+
+        while (i >= 0)
+        {
+            transform.position = Vector3.MoveTowards(
+                          transform.position,
+                          path[i].transform.position,
+                          Time.deltaTime * 10
+                       );
+
+            transform.Rotate(0, 0, 0.5f);
+
+            if (transform.position == path[i].transform.position)
+                i--;
+
+            yield return null;
+        }
     }
 }
