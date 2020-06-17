@@ -983,7 +983,7 @@ PrefabInstance:
     - target: {fileID: 7996197433084702989, guid: 104c33efbc36248978e262227a0d6563,
         type: 3}
       propertyPath: slideSpeed
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7996197433084702989, guid: 104c33efbc36248978e262227a0d6563,
         type: 3}
@@ -1053,12 +1053,12 @@ PrefabInstance:
     - target: {fileID: 7996197433084702991, guid: 104c33efbc36248978e262227a0d6563,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -756.35
+      value: -84
       objectReference: {fileID: 0}
     - target: {fileID: 7996197433084702991, guid: 104c33efbc36248978e262227a0d6563,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.8999
+      value: 0.00000047684
       objectReference: {fileID: 0}
     - target: {fileID: 7996197433084702991, guid: 104c33efbc36248978e262227a0d6563,
         type: 3}

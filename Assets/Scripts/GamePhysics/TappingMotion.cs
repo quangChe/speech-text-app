@@ -9,10 +9,16 @@ public class TappingMotion : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(AnimateTap());
+        StartCoroutine(AnimateTapping());
     }
 
-    public IEnumerator AnimateTap()
+    public IEnumerator AnimateTapping()
+    {
+        yield return StartCoroutine(HandDownMotion());
+        StartCoroutine(HandUpMotion());
+    }
+
+    private IEnumerator HandDownMotion()
     {
         int i = 0;
 
@@ -21,29 +27,37 @@ public class TappingMotion : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position,
                 path[i].transform.position, Time.deltaTime * 10);
 
-            transform.Rotate(0, 0, -1.25f);
+            transform.Rotate(0, 0, -0.75f);
 
             if (transform.position == path[i].transform.position) i++;
 
             yield return null;
         }
 
-        drumSound.Play();
 
-        i = path.Length - 1;
+        AddExtraEffects();
+    }
+
+    private IEnumerator HandUpMotion()
+    {
+        int i = path.Length - 1;
 
         while (i >= 0)
         {
             transform.position = Vector3.MoveTowards(transform.position,
                 path[i].transform.position, Time.deltaTime * 10);
 
-            transform.Rotate(0, 0, 1.25f);
+            transform.Rotate(0, 0, 0.75f);
 
             if (transform.position == path[i].transform.position) i--;
 
             yield return null;
         }
 
-        //StartCoroutine(AnimateTap());
+    }
+
+    private void AddExtraEffects()
+    {
+        drumSound.Play();
     }
 }
