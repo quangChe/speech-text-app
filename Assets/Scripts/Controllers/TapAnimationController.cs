@@ -8,6 +8,7 @@ public class TapAnimationController : MonoBehaviour
     public GameObject[] path;
     public GameObject hand;
     public GameObject textPrompt;
+    public GameObject tapVisual;
     public AudioSource drumSound;
 
     private void Update()
@@ -33,9 +34,10 @@ public class TapAnimationController : MonoBehaviour
         while (i < path.Length)
         {
             hand.transform.position = Vector3.MoveTowards(hand.transform.position,
-                path[i].transform.position, Time.deltaTime * 18);
+                path[i].transform.position, Time.deltaTime * 15);
 
             if (hand.transform.position == path[i].transform.position) i++;
+            if (i == path.Length) tapVisual.SetActive(true);
 
             yield return null;
         }
@@ -49,14 +51,15 @@ public class TapAnimationController : MonoBehaviour
 
         while (i >= 0)
         {
+            if (i == 0) tapVisual.SetActive(false);
+
             hand.transform.position = Vector3.MoveTowards(hand.transform.position,
-                path[i].transform.position, Time.deltaTime * 18);
+            path[i].transform.position, Time.deltaTime * 15);
 
             if (hand.transform.position == path[i].transform.position) i--;
 
             yield return null;
         }
-
     }
 
 
