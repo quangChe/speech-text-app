@@ -14,6 +14,11 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -34,7 +39,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/GameScene.unity:
+    Assets/Scenes/TestScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -47,38 +52,50 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11156}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 11326}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11784}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 12196}
+      Script: {instanceID: 11808}
     - Class: 114
-      Script: {instanceID: 12236}
+      Script: {instanceID: 11834}
     - Class: 114
-      Script: {instanceID: 12396}
+      Script: {instanceID: 12222}
     - Class: 114
-      Script: {instanceID: 12564}
+      Script: {instanceID: 12262}
     - Class: 114
-      Script: {instanceID: 12580}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 12714}
+      Script: {instanceID: 12456}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12470}
     - Class: 114
-      Script: {instanceID: 13102}
+      Script: {instanceID: 12588}
     - Class: 114
-      Script: {instanceID: 20464}
+      Script: {instanceID: 12604}
+    - Class: 114
+      Script: {instanceID: 12740}
+    - Class: 114
+      Script: {instanceID: 12744}
+    - Class: 114
+      Script: {instanceID: 12912}
+    - Class: 114
+      Script: {instanceID: 13128}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -132,6 +149,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ba309c660cb650c78708365f8d0a6c0d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MicrophoneComponent
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -404,6 +427,12 @@ ScriptsOnlyBuild:
     className: SpeechRecognizerListener
   - hash:
       serializedVersion: 2
+      Hash: 453b01a53639a644498aae1d99e76841
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TapAnimationController
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -540,19 +569,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: ba309c660cb650c78708365f8d0a6c0d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MicrophoneComponent
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpeechComponents
   platform: 13
   scenePathNames:
-  - Assets/Scenes/GameScene.unity
+  - Assets/Scenes/TestScene.unity
   playerPath: /Users/q/Desktop/FlintRehab/Unity/SpeechHero/Builds/android_build.apk

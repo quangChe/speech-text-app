@@ -238,7 +238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7996197433084702991}
-  - component: {fileID: 7996197433084702989}
+  - component: {fileID: 5189202587104166825}
   - component: {fileID: 7996197433084702988}
   m_Layer: 5
   m_Name: SlidingWord
@@ -268,7 +268,7 @@ RectTransform:
   m_AnchoredPosition: {x: 940, y: 0}
   m_SizeDelta: {x: 250, y: 476.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7996197433084702989
+--- !u!114 &5189202587104166825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
