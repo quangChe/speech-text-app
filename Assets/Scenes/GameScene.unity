@@ -343,7 +343,7 @@ RectTransform:
   - {fileID: 169977974}
   - {fileID: 1391966085}
   m_Father: {fileID: 1942595812}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -380,7 +380,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1942595812}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -599,6 +599,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1318667996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7996197433084702990, guid: 104c33efbc36248978e262227a0d6563,
+    type: 3}
+  m_PrefabInstance: {fileID: 7996197433719178510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1318667998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318667996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717a41772bf3046dbbacf46fa6d429b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideSpeed: 5
+  rb: {fileID: 0}
 --- !u!1 &1361475858
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +649,7 @@ RectTransform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1942595812}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1145,9 +1165,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 898534565}
   - {fileID: 826153204}
   - {fileID: 1361475859}
+  - {fileID: 898534565}
   - {fileID: 1535986335}
   m_Father: {fileID: 967605957}
   m_RootOrder: 2
@@ -1168,7 +1188,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8dab873c5643d4dc6b28fc1712cf2b35, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1265,9 +1285,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da712fdbc6e5f4761bc6dbadee6dafb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: []
-  drumSound: {fileID: 0}
-  textPrompt: {fileID: 0}
+  path:
+  - {fileID: 1578064675}
+  - {fileID: 169977973}
+  - {fileID: 1391966084}
+  hand: {fileID: 898534564}
+  drumSound: {fileID: 1942595813}
+  textPrompt: {fileID: 1535986334}
 --- !u!1001 &7996197433719178510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1275,18 +1299,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 967605957}
     m_Modifications:
-    - target: {fileID: 7996197433084702989, guid: 104c33efbc36248978e262227a0d6563,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: movement.x
       value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 7996197433084702989, guid: 104c33efbc36248978e262227a0d6563,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: slideSpeed
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 7996197433084702989, guid: 104c33efbc36248978e262227a0d6563,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: movement.y
       value: 0
       objectReference: {fileID: 0}
@@ -1405,6 +1426,5 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7996197433084702989, guid: 104c33efbc36248978e262227a0d6563, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104c33efbc36248978e262227a0d6563, type: 3}
