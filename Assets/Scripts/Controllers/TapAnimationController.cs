@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TapAnimationController : MonoBehaviour
 {
     public GameObject[] path;
     public GameObject hand;
-    public AudioSource drumSound;
     public GameObject textPrompt;
+    public AudioSource drumSound;
 
     private void Update()
     {
@@ -19,7 +20,9 @@ public class TapAnimationController : MonoBehaviour
 
     public IEnumerator AnimateTapping()
     {
+        yield return StartCoroutine(ShowTextPrompt());
         yield return StartCoroutine(HandDownMotion());
+        StartCoroutine(HideTextPrompt());
         StartCoroutine(HandUpMotion());
     }
 
@@ -30,15 +33,14 @@ public class TapAnimationController : MonoBehaviour
         while (i < path.Length)
         {
             hand.transform.position = Vector3.MoveTowards(hand.transform.position,
-                path[i].transform.position, Time.deltaTime * 15);
+                path[i].transform.position, Time.deltaTime * 18);
 
             if (hand.transform.position == path[i].transform.position) i++;
 
             yield return null;
         }
 
-
-        AddExtraEffects();
+        drumSound.Play();
     }
 
     private IEnumerator HandUpMotion()
@@ -48,7 +50,7 @@ public class TapAnimationController : MonoBehaviour
         while (i >= 0)
         {
             hand.transform.position = Vector3.MoveTowards(hand.transform.position,
-                path[i].transform.position, Time.deltaTime * 15);
+                path[i].transform.position, Time.deltaTime * 18);
 
             if (hand.transform.position == path[i].transform.position) i--;
 
@@ -57,8 +59,27 @@ public class TapAnimationController : MonoBehaviour
 
     }
 
-    private void AddExtraEffects()
+
+    private IEnumerator ShowTextPrompt()
     {
-        drumSound.Play();
+        Vector3 scale = textPrompt.transform.localScale;
+        while (scale.x <= 1.2f)
+        {
+            textPrompt.transform.localScale = new Vector3(scale.x + 0.02f, scale.y + 0.02f);
+            scale = textPrompt.transform.localScale;
+            Debug.Log(scale);
+            yield return null;
+        }
+    }
+
+    private IEnumerator HideTextPrompt()
+    {
+        Vector3 scale = textPrompt.transform.localScale;
+        while (scale.x >= 0f)
+        {
+            textPrompt.transform.localScale = new Vector3(scale.x - 0.02f, scale.y - 0.02f);
+            scale = textPrompt.transform.localScale;
+            yield return null;
+        }
     }
 }
