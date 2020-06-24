@@ -5,19 +5,15 @@ using UnityEngine;
 public class WordSpawnController : MonoBehaviour
 {
     public GameObject fretBoard;
-    public GameObject slidingWord;
+    public GameObject slidingWordPrefab;
+    private GameObject wordClone;
+    private SlidingWordController wordController;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject wordClone = Instantiate(slidingWord, fretBoard.transform);
-        Debug.Log(wordClone.GetComponent<Rigidbody2D>().position);
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        wordClone = Instantiate(slidingWordPrefab, fretBoard.transform);
+        wordController = wordClone.GetComponent<SlidingWordController>();
+        wordController.BuildWord("Testing123");
     }
 }
