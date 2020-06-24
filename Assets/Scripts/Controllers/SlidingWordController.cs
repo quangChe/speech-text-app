@@ -8,6 +8,11 @@ public class SlidingWordController : MonoBehaviour
     public Rigidbody2D rb;
     private Vector2 movement = new Vector2(-1f, 0f);
 
+    private void Start()
+    {
+        Debug.Log(transform.parent);
+    }
+
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * slideSpeed * Time.deltaTime);
