@@ -14,6 +14,6 @@ public class WordSpawnController : MonoBehaviour
     {
         wordClone = Instantiate(slidingWordPrefab, fretBoard.transform);
         wordController = wordClone.GetComponent<SlidingWordController>();
-        wordController.BuildWord("Testing123");
+        wordController.BuildWord("testing123");
     }
 }

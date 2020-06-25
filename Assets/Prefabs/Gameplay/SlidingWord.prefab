@@ -280,8 +280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717a41772bf3046dbbacf46fa6d429b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideSpeed: 5
+  slideSpeed: 2
   rb: {fileID: 7996197433084702988}
+  wordBubble: {fileID: 7996197432718085566}
+  textObject: {fileID: 7996197432968267174}
 --- !u!50 &7996197433084702988
 Rigidbody2D:
   serializedVersion: 4
