@@ -18,12 +18,12 @@ public class SlidingWordController : MonoBehaviour
     {
         float newWidth = wordBubble.rect.width + (word.Length * 40);
         TextMeshProUGUI text = textObject.GetComponent<TextMeshProUGUI>();
-        SetDimensions(newWidth);
+        SetWordBoxDimensions(newWidth);
         text.text = word;
         activated = true;
     }
 
-    private void SetDimensions(float width)
+    private void SetWordBoxDimensions(float width)
     {
         RectTransform container = GetComponent<RectTransform>();
         RectTransform textRect = textObject.GetComponent<RectTransform>();

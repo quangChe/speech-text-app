@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WordSpawnController : MonoBehaviour
 {
+    public RectTransform rect;
     public GameObject fretBoard;
     public GameObject slidingWordPrefab;
     private GameObject wordClone;
@@ -12,8 +13,22 @@ public class WordSpawnController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wordClone = Instantiate(slidingWordPrefab, fretBoard.transform);
+        
+    }
+
+    private void SpawnWord(string word)
+    {
+        wordClone = Instantiate(slidingWordPrefab, GetComponent<RectTransform>());
+        wordClone.transform.localPosition = Vector2.zero;
         wordController = wordClone.GetComponent<SlidingWordController>();
-        wordController.BuildWord("testing123");
+        wordController.BuildWord(word);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("r"))
+        {
+            SpawnWord("testing123");
+        }
     }
 }
