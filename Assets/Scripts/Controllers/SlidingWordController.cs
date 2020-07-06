@@ -27,10 +27,12 @@ public class SlidingWordController : MonoBehaviour
     {
         RectTransform container = GetComponent<RectTransform>();
         RectTransform textRect = textObject.GetComponent<RectTransform>();
+        BoxCollider2D colliderBox = GetComponent<BoxCollider2D>();
 
         container.sizeDelta = new Vector2(width, container.rect.height);
         wordBubble.sizeDelta = new Vector2(width, wordBubble.rect.height);
         textRect.sizeDelta = new Vector2(width, textRect.rect.height);
+        colliderBox.size = new Vector2(width, colliderBox.size.y);
     }
 
     private void FixedUpdate()
