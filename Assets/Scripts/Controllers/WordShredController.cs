@@ -10,13 +10,13 @@ public class WordShredController : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other);
+        Destroy(other.gameObject);
     }
 
-    void OnCollisionExit(Collision other)
-    {
-        Debug.Log(other);
-    }
+    //void OnTriggerExit2D(Collider2D other)
+    //{
+    //    Debug.Log(other);
+    //}
 }
