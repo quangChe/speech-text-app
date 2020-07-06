@@ -25,7 +25,7 @@ public class WordSpawnController : MonoBehaviour
             wordClone.transform.localPosition.y
         );
         wordController = wordClone.GetComponent<SlidingWordController>();
-        wordController.BuildWord(word);
+        wordController.InitializeSlidingWord(word);
     }
 
     private void Update()

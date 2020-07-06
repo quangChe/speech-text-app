@@ -13,7 +13,8 @@ public class SlidingWordController : MonoBehaviour
     private Vector2 movement = new Vector2(-1f, 0f);
     private bool activated = false;
 
-    public void BuildWord(string word)
+
+    public void InitializeSlidingWord(string word)
     {
         textBox.text = word;
         activated = true;
