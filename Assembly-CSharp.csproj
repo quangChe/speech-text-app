@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Controllers\HitBoxController.cs" />
     <Compile Include="Assets\Scripts\Controllers\SlidingWordController.cs" />
     <Compile Include="Assets\Scripts\Controllers\TapAnimationController.cs" />
     <Compile Include="Assets\Scripts\Controllers\WordShredController.cs" />

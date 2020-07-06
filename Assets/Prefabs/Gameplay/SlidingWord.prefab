@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 7}
-  m_SizeDelta: {x: 250, y: 200}
+  m_SizeDelta: {x: 525, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7996197432718085564
 CanvasRenderer:
@@ -109,7 +109,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00000071526, y: 0.0000026222}
-  m_SizeDelta: {x: 240, y: 200}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7996197432968267173
 CanvasRenderer:
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: s
+  m_text: a
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -267,7 +267,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 940, y: 0}
-  m_SizeDelta: {x: 250, y: 476.3}
+  m_SizeDelta: {x: 500, y: 476.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5189202587104166825
 MonoBehaviour:
@@ -283,8 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slideSpeed: 5
   rb: {fileID: 7996197433084702988}
-  wordBubble: {fileID: 7996197432718085566}
-  textObject: {fileID: 7996197432968267174}
+  textBox: {fileID: 7996197432968267172}
 --- !u!50 &7996197433084702988
 Rigidbody2D:
   serializedVersion: 4

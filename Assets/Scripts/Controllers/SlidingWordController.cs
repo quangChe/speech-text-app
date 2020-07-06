@@ -8,32 +8,17 @@ public class SlidingWordController : MonoBehaviour
 {
     public float slideSpeed = 2f;
     public Rigidbody2D rb;
-    public RectTransform wordBubble;
-    public GameObject textObject;
+    public TextMeshProUGUI textBox;
 
     private Vector2 movement = new Vector2(-1f, 0f);
     private bool activated = false;
 
     public void BuildWord(string word)
     {
-        float newWidth = wordBubble.rect.width + (word.Length * 40);
-        TextMeshProUGUI text = textObject.GetComponent<TextMeshProUGUI>();
-        SetWordBoxDimensions(newWidth);
-        text.text = word;
+        textBox.text = word;
         activated = true;
     }
 
-    private void SetWordBoxDimensions(float width)
-    {
-        RectTransform container = GetComponent<RectTransform>();
-        RectTransform textRect = textObject.GetComponent<RectTransform>();
-        BoxCollider2D colliderBox = GetComponent<BoxCollider2D>();
-
-        container.sizeDelta = new Vector2(width, container.rect.height);
-        wordBubble.sizeDelta = new Vector2(width, wordBubble.rect.height);
-        textRect.sizeDelta = new Vector2(width, textRect.rect.height);
-        colliderBox.size = new Vector2(width, colliderBox.size.y);
-    }
 
     private void FixedUpdate()
     {
