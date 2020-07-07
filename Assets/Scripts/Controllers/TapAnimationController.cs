@@ -11,14 +11,6 @@ public class TapAnimationController : MonoBehaviour
     public GameObject tapVisual;
     public AudioSource drumSound;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown("t"))
-        {
-            StartCoroutine(AnimateTapping());
-        }
-    }
-
     public IEnumerator AnimateTapping()
     {
         yield return StartCoroutine(ShowTextPrompt());
