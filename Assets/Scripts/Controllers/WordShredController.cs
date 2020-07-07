@@ -12,7 +12,7 @@ public class WordShredController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(other.gameObject);
+        Destroy(other.transform.parent.gameObject);
     }
 
     //void OnTriggerExit2D(Collider2D other)

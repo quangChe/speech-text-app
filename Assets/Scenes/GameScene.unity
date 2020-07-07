@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb72230415c87488ca959a903038d97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tapAnimation: {fileID: 1942595814}
 --- !u!1 &169977973
 GameObject:
   m_ObjectHideFlags: 0

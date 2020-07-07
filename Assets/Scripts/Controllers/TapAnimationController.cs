@@ -62,7 +62,6 @@ public class TapAnimationController : MonoBehaviour
         {
             textPrompt.transform.localScale = new Vector3(scale.x + 0.02f, scale.y + 0.02f);
             scale = textPrompt.transform.localScale;
-            Debug.Log(scale);
             yield return null;
         }
     }
