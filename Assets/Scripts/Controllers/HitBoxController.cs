@@ -19,13 +19,19 @@ public class HitBoxController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        GameObject lightBubble = other.transform.GetChild(2).transform.gameObject;
-        lightBubble.SetActive(true);
+        if (other.gameObject.name == "OuterCollider")
+        {
+            GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
+            lightBubble.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        GameObject lightBubble = other.transform.GetChild(2).transform.gameObject;
-        lightBubble.SetActive(false);
+        if (other.gameObject.name == "OuterCollider")
+        {
+            GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
+            lightBubble.SetActive(false);
+        }
     }
 }
