@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class MicrophoneComponent : MonoBehaviour
 {
     public Button micButton;
@@ -27,7 +28,10 @@ public class MicrophoneComponent : MonoBehaviour
 
     private void Start()
     {
-        micButton.onClick.AddListener(() => ToggleMicrophone());
+        if (micButton)
+        {
+            micButton.onClick.AddListener(() => ToggleMicrophone());
+        }
     }
 
 
