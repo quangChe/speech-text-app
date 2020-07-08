@@ -41,12 +41,16 @@ public class MicrophoneComponent : MonoBehaviour
         decibalText.text = MicLoudness.ToString() + " db";
     }
 
-    private void ToggleMicrophone()
+    public void ToggleMicrophone()
     {
         if (isRecording)
         {
             StopMic();
+            if (micButton)
+            {
+
             micButton.GetComponentInChildren<Text>().text = "Start Mic";
+            }
         }
         else
         {

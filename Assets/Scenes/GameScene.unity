@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tapAnimation: {fileID: 1942595814}
-  microphone: {fileID: 0}
+  mic: {fileID: 261824552}
 --- !u!1 &169977973
 GameObject:
   m_ObjectHideFlags: 0

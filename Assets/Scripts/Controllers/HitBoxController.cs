@@ -5,7 +5,7 @@ using UnityEngine;
 public class HitBoxController : MonoBehaviour
 {
     public TapAnimationController tapAnimation;
-    public MicrophoneComponent microphone;
+    public MicrophoneComponent mic;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,7 @@ public class HitBoxController : MonoBehaviour
     {
         if (other.gameObject.name == "OuterCollider")
         {
+            mic.ToggleMicrophone();
             StartCoroutine(tapAnimation.AnimateTapping());
             GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
             lightBubble.SetActive(true);
@@ -34,6 +35,7 @@ public class HitBoxController : MonoBehaviour
     {
         if (other.gameObject.name == "OuterCollider")
         {
+            mic.ToggleMicrophone();
             GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
             lightBubble.SetActive(false);
         }
