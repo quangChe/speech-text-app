@@ -3,21 +3,21 @@
     <Files>
       <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
       <File FileName="Assets/Scripts/TTS/TTSComponent.cs" />
-      <File FileName="Assets/Scripts/STT/SpeechRecognizerListener.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/STT/SpeechRecognizerListener.cs" />
       <File FileName="Assets/Scripts/STT/STTComponent.cs" />
       <File FileName="Assets/Scripts/TTS/TextToSpeech.cs" />
       <File FileName="Assets/Scripts/TTS/Singleton.cs" />
-      <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" Line="52" Column="25" />
-      <File FileName="Assets/Scripts/Controllers/SlidingWordController.cs" Line="17" Column="38" />
-      <File FileName="Assets/Scripts/Controllers/TapAnimationController.cs" Line="64" Column="53" />
-      <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" Line="28" Column="45" />
-      <File FileName="Assets/Scripts/Controllers/WordShredController.cs" Line="20" Column="28" />
-      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="38" Column="36" />
+      <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" Line="58" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/SlidingWordController.cs" />
+      <File FileName="Assets/Scripts/Controllers/TapAnimationController.cs" />
+      <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" />
+      <File FileName="Assets/Scripts/Controllers/WordShredController.cs" />
+      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8a5917a0-008c-45c0-84cc-acdaa431c970" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="713926a3-017d-497f-ac1b-b6c7d4d1408c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

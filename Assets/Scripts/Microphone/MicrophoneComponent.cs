@@ -29,9 +29,7 @@ public class MicrophoneComponent : MonoBehaviour
     private void Start()
     {
         if (micButton)
-        {
             micButton.onClick.AddListener(() => ToggleMicrophone());
-        }
     }
 
 
@@ -47,15 +45,13 @@ public class MicrophoneComponent : MonoBehaviour
         {
             StopMic();
             if (micButton)
-            {
-
-            micButton.GetComponentInChildren<Text>().text = "Start Mic";
-            }
+                micButton.GetComponentInChildren<Text>().text = "Start Mic";
         }
         else
         {
             StartMic();
-            micButton.GetComponentInChildren<Text>().text = "Stop Mic";
+            if (micButton)
+                micButton.GetComponentInChildren<Text>().text = "Stop Mic";
         }
     }
 
