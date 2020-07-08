@@ -71,7 +71,7 @@ public class MicrophoneComponent : MonoBehaviour
 
 
     // Grabs mic data and stores as audio clip
-    private float MicrophoneLevelMax()
+    public float MicrophoneLevelMax()
     {
         float levelMax = 0;
         float[] waveData = new float[audioSampleWindow];

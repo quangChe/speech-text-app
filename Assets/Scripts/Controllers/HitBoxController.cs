@@ -6,6 +6,7 @@ public class HitBoxController : MonoBehaviour
 {
     public TapAnimationController tapAnimation;
     public MicrophoneComponent mic;
+    public List<Collider2D> focusedWords = new List<Collider2D>();
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,8 @@ public class HitBoxController : MonoBehaviour
         {
             mic.ToggleMicrophone();
             StartCoroutine(tapAnimation.AnimateTapping());
+            focusedWords.Add(other);
+            StartCoroutine(StartDetection(other));
             GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
             lightBubble.SetActive(true);
         }
@@ -35,9 +38,19 @@ public class HitBoxController : MonoBehaviour
     {
         if (other.gameObject.name == "OuterCollider")
         {
+            focusedWords.RemoveAt(0);
             mic.ToggleMicrophone();
             GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
             lightBubble.SetActive(false);
+        }
+    }
+
+    private IEnumerator StartDetection(Collider2D other)
+    {
+        while (focusedWords.Count > 0 && other == focusedWords[0])
+        {
+            Debug.Log(mic.MicrophoneLevelMax());
+            yield return null;
         }
     }
 }
