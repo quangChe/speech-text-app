@@ -30,9 +30,9 @@ public class WordSpawnController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("r"))
+        if (Input.GetKeyDown("1"))
         {
-            SpawnWord("testing123");
+            SpawnWord("hi");
         }
     }
 }
