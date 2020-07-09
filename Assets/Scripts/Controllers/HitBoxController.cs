@@ -50,6 +50,10 @@ public class HitBoxController : MonoBehaviour
         while (focusedWords.Count > 0 && other == focusedWords[0])
         {
             Debug.Log(mic.MicrophoneLevelMax());
+            if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
+            {
+                Destroy(other.transform.parent.gameObject);
+            }
             yield return null;
         }
     }
