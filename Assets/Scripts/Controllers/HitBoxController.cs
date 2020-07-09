@@ -53,6 +53,7 @@ public class HitBoxController : MonoBehaviour
             if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
             {
                 Destroy(other.transform.parent.gameObject);
+                //Time.timeScale = 0;
             }
             yield return null;
         }

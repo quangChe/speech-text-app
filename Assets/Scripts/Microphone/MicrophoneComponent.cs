@@ -55,7 +55,7 @@ public class MicrophoneComponent : MonoBehaviour
         }
     }
 
-    public void StartMic()
+        public void StartMic()
     {
         if (microphone == null) microphone = Microphone.devices[0];
         audioClip = Microphone.Start(microphone, true, 999, 44100);
