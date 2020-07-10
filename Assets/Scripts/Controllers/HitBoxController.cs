@@ -8,6 +8,7 @@ public class HitBoxController : MonoBehaviour
     public MicrophoneComponent mic;
     public List<Collider2D> focusedWords = new List<Collider2D>();
     float timer = 0f;
+    bool timerStarted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,6 @@ public class HitBoxController : MonoBehaviour
     void Update()
     {
     }
-
-    void IncrementTimer()
-    {
-        timer += 0.01f;
-    }
-
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -51,19 +46,18 @@ public class HitBoxController : MonoBehaviour
 
     private IEnumerator StartDetection(Collider2D other)
     {
-        InvokeRepeating("IncrementTimer", 0f, 0.01f);
 
         while (focusedWords.Count > 0 && other == focusedWords[0])
         {
             if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
             {
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.12f);
                 if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
-                    //Debug.Log(mic.MicrophoneLevelMax() + " - " + timer + "sec");
                     Destroy(other.transform.parent.gameObject);
             }
 
             yield return null;
         }
     }
+
 }
