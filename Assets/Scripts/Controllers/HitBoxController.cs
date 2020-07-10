@@ -7,18 +7,7 @@ public class HitBoxController : MonoBehaviour
     public TapAnimationController tapAnimation;
     public MicrophoneComponent mic;
     public List<Collider2D> focusedWords = new List<Collider2D>();
-    float timer = 0f;
-    bool timerStarted = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
+    public AudioSource successSound;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -53,7 +42,10 @@ public class HitBoxController : MonoBehaviour
             {
                 yield return new WaitForSeconds(0.12f);
                 if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
+                {
+                    successSound.Play();
                     Destroy(other.transform.parent.gameObject);
+                }
             }
 
             yield return null;
