@@ -9,6 +9,9 @@ public class HitBoxController : MonoBehaviour
     public List<Collider2D> focusedWords = new List<Collider2D>();
     public AudioSource successSound;
 
+    private int amplitudeTimer = 0;
+    private bool filtering = false;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "OuterCollider")
@@ -38,18 +41,30 @@ public class HitBoxController : MonoBehaviour
 
         while (focusedWords.Count > 0 && other == focusedWords[0])
         {
-            if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
-            {
-                yield return new WaitForSeconds(0.12f);
-                if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
-                {
-                    successSound.Play();
-                    Destroy(other.transform.parent.gameObject);
-                }
-            }
-
+            if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f && !filtering)
+                InvokeRepeating("FiterAudio", 0.12f, 0.02f);
             yield return null;
         }
+    }
+
+    private void FiterAudio()
+    {
+
+        filtering = true; 
+        if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
+        {
+            amplitudeTimer++;
+            if (amplitudeTimer >= 200)
+                RegisterHit();
+        }
+
+    }
+
+    private void RegisterHit()
+    {
+        filtering = false;
+        amplitudeTimer = 0;
+        Destroy(focusedWords[0].transform.parent.gameObject);
     }
 
 }

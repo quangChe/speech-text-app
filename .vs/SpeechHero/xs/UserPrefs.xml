@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/STT/SpeechRecognizer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/HitBoxController.cs">
     <Files>
       <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
       <File FileName="Assets/Scripts/TTS/TTSComponent.cs" />
@@ -7,18 +7,18 @@
       <File FileName="Assets/Scripts/STT/STTComponent.cs" />
       <File FileName="Assets/Scripts/TTS/TextToSpeech.cs" />
       <File FileName="Assets/Scripts/TTS/Singleton.cs" />
-      <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" Line="58" Column="1" />
+      <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" />
       <File FileName="Assets/Scripts/Controllers/SlidingWordController.cs" />
       <File FileName="Assets/Scripts/Controllers/TapAnimationController.cs" />
       <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" />
       <File FileName="Assets/Scripts/Controllers/WordShredController.cs" />
-      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" />
-      <File FileName="Assets/Scripts/STT/SpeechRecognizer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="46" Column="34" />
+      <File FileName="Assets/Scripts/STT/SpeechRecognizer.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5817b049-e390-432a-90fd-1128a708867a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e09bc887-7178-461d-8e7d-078a0e213144" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
