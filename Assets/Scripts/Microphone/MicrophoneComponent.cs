@@ -70,7 +70,7 @@ public class MicrophoneComponent : MonoBehaviour
     }
 
 
-    // Grabs mic data and stores as audio clip
+    // Grabs mic data and get the peak of each audio sample to output as decibels
     public float MicrophoneLevelMax()
     {
         float levelMax = 0;

@@ -11,6 +11,7 @@ public class HitBoxController : MonoBehaviour
 
     private int amplitudeTimer = 0;
     private bool filtering = false;
+    private int requiredAudioLength = 200;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -42,7 +43,11 @@ public class HitBoxController : MonoBehaviour
         while (focusedWords.Count > 0 && other == focusedWords[0])
         {
             if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f && !filtering)
+            {
+                filtering = true;
                 InvokeRepeating("FiterAudio", 0.12f, 0.02f);
+            }
+
             yield return null;
         }
     }
@@ -50,11 +55,10 @@ public class HitBoxController : MonoBehaviour
     private void FiterAudio()
     {
 
-        filtering = true; 
         if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
         {
             amplitudeTimer++;
-            if (amplitudeTimer >= 200)
+            if (amplitudeTimer >= requiredAudioLength)
                 RegisterHit();
         }
 
