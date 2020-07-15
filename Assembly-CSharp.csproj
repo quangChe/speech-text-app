@@ -657,6 +657,7 @@
     <Reference Include="Boo.Lang">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+    <None Include="Assets\Resources\Words\WordDictionary.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

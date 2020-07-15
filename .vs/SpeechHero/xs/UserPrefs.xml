@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/HitBoxController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Words/NewFile.txt">
     <Files>
       <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
       <File FileName="Assets/Scripts/TTS/TTSComponent.cs" />
@@ -7,14 +7,30 @@
       <File FileName="Assets/Scripts/STT/STTComponent.cs" />
       <File FileName="Assets/Scripts/TTS/TextToSpeech.cs" />
       <File FileName="Assets/Scripts/TTS/Singleton.cs" />
-      <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" />
+      <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" Line="90" Column="10" />
       <File FileName="Assets/Scripts/Controllers/SlidingWordController.cs" />
       <File FileName="Assets/Scripts/Controllers/TapAnimationController.cs" />
       <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" />
       <File FileName="Assets/Scripts/Controllers/WordShredController.cs" />
-      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="46" Column="34" />
+      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="62" Column="31" />
       <File FileName="Assets/Scripts/STT/SpeechRecognizer.cs" />
+      <File FileName="Assets/Resources/Words/NewFile.txt" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SpeechHero" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="Words" expanded="True">
+                  <Node name="NewFile.txt" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
