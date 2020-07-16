@@ -9,9 +9,15 @@ public class HitBoxController : MonoBehaviour
     public List<Collider2D> focusedWords = new List<Collider2D>();
     public AudioSource successSound;
 
-    private int amplitudeTimer = 0;
     private bool filtering = false;
-    private int requiredAudioLength = 200;
+
+    /* These are numbers to adjust depending on sampling rate of device */
+    private float timeBetweenChecks = 0.02f;
+        // - Adjust this number to specify how often to listen for amplitude spike
+    private int amplitudeSpikeCount = 0;
+        // - Count of spikes each check
+    private int amplitudeSpikeCountTarget = 10;
+        // - Number of spikes to confirm persistent sound (speech) rather than short spikes (taps)
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -45,7 +51,7 @@ public class HitBoxController : MonoBehaviour
             if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f && !filtering)
             {
                 filtering = true;
-                InvokeRepeating("FiterAudio", 0.12f, 0.02f);
+                InvokeRepeating("FiterAudio", 0f, timeBetweenChecks);
             }
 
             yield return null;
@@ -57,8 +63,8 @@ public class HitBoxController : MonoBehaviour
 
         if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
         {
-            amplitudeTimer++;
-            if (amplitudeTimer >= requiredAudioLength)
+            amplitudeSpikeCount++;
+            if (amplitudeSpikeCount >= amplitudeSpikeCountTarget)
                 RegisterHit();
         }
 
@@ -66,9 +72,11 @@ public class HitBoxController : MonoBehaviour
 
     private void RegisterHit()
     {
-        filtering = false;
-        amplitudeTimer = 0;
-        Destroy(focusedWords[0].transform.parent.gameObject);
+        Debug.Log(amplitudeSpikeCount);
+        //CancelInvoke("FilterAudio");
+        //filtering = false;
+        //amplitudeSpikeCount = 0;
+        //Destroy(focusedWords[0].transform.parent.gameObject);
     }
 
 }
