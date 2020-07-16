@@ -14,7 +14,7 @@ public class SlidingSyllablesController : MonoBehaviour
     private bool activated = false;
 
 
-    public void InitializeSlidingSyllables(string word)
+    public void InitializeSlidingSyllables(List<string> syllables)
     {
         //textBox.text = word;
         //activated = true;

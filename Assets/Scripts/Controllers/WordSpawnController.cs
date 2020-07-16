@@ -21,7 +21,7 @@ public class WordSpawnController : MonoBehaviour
         wordClone = Instantiate(slidingWordPrefab, GetComponent<RectTransform>());
         wordClone.transform.localPosition = Vector2.zero;
         wordClone.transform.localPosition = new Vector2(
-            wordClone.transform.localPosition.x + (word.Length * 40f),
+            wordClone.transform.localPosition.x + 525f,
             wordClone.transform.localPosition.y
         );
         wordController = wordClone.GetComponent<SlidingWordController>();

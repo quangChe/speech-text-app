@@ -21,7 +21,7 @@ public class HitBoxController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "OuterCollider")
+        if (other.gameObject.name == "WordCollider")
         {
             mic.ToggleMicrophone();
             StartCoroutine(tapAnimation.AnimateTapping());
@@ -35,7 +35,7 @@ public class HitBoxController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.name == "OuterCollider")
+        if (other.gameObject.name == "WordCollider")
         {
             focusedWords.RemoveAt(0);
             mic.ToggleMicrophone();
