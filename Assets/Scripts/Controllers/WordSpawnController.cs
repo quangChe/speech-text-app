@@ -16,7 +16,7 @@ public class WordSpawnController : MonoBehaviour
         
     }
 
-    private void SpawnWord(string word)
+    private void SpawnSingleSyllableWord(string word)
     {
         wordClone = Instantiate(slidingWordPrefab, GetComponent<RectTransform>());
         wordClone.transform.localPosition = Vector2.zero;
@@ -28,11 +28,20 @@ public class WordSpawnController : MonoBehaviour
         wordController.InitializeSlidingWord(word);
     }
 
+    private void SpawnMultiSyllableWord(string word)
+    {
+        
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown("1"))
         {
-            SpawnWord("hi");
+            SpawnSingleSyllableWord("hi");
+        } else if (Input.GetKeyDown("2"))
+        {
+            SpawnMultiSyllableWord("hel-lo");
         }
+
     }
 }

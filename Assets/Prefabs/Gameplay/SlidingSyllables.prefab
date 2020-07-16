@@ -539,7 +539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slideSpeed: 5
   rb: {fileID: 7996197433084702988}
-  textBox: {fileID: 0}
+  syllable: {fileID: 4253596523382176564}
 --- !u!1 &7996197434111048752
 GameObject:
   m_ObjectHideFlags: 0
