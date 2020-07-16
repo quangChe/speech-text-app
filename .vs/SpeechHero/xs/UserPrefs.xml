@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Words/NewFile.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/NewFile.txt">
     <Files>
       <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
       <File FileName="Assets/Scripts/TTS/TTSComponent.cs" />
@@ -12,9 +12,10 @@
       <File FileName="Assets/Scripts/Controllers/TapAnimationController.cs" />
       <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" />
       <File FileName="Assets/Scripts/Controllers/WordShredController.cs" />
-      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="62" Column="31" />
-      <File FileName="Assets/Scripts/STT/SpeechRecognizer.cs" />
-      <File FileName="Assets/Resources/Words/NewFile.txt" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="29" Column="98" />
+      <File FileName="Assets/Scripts/STT/SpeechRecognizer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Words/NewFile.txt" Line="47" Column="2" />
+      <File FileName="Assets/Scripts/Controllers/NewFile.txt" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,9 +23,13 @@
           <Node name="SpeechHero" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Resources" expanded="True">
-                <Node name="Words" expanded="True">
+                <Node name="Words" expanded="True" />
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="Controllers" expanded="True">
                   <Node name="NewFile.txt" selected="True" />
                 </Node>
+                <Node name="STT" expanded="True" />
               </Node>
             </Node>
           </Node>

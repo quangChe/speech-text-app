@@ -26,6 +26,7 @@ public class HitBoxController : MonoBehaviour
             mic.ToggleMicrophone();
             StartCoroutine(tapAnimation.AnimateTapping());
             focusedWords.Add(other);
+            Debug.Log(other.gameObject.transform.parent.gameObject.name == "SlidingWord(Clone)");
             StartCoroutine(StartDetection(other));
             GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
             lightBubble.SetActive(true);
@@ -72,11 +73,10 @@ public class HitBoxController : MonoBehaviour
 
     private void RegisterHit()
     {
-        Debug.Log(amplitudeSpikeCount);
-        //CancelInvoke("FilterAudio");
-        //filtering = false;
-        //amplitudeSpikeCount = 0;
-        //Destroy(focusedWords[0].transform.parent.gameObject);
+        CancelInvoke("FilterAudio");
+        filtering = false;
+        amplitudeSpikeCount = 0;
+        Destroy(focusedWords[0].transform.parent.gameObject);
     }
 
 }

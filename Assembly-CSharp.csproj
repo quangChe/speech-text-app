@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controllers\HitBoxController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\SlidingSyllablesController.cs" />
     <Compile Include="Assets\Scripts\Controllers\SlidingWordController.cs" />
     <Compile Include="Assets\Scripts\Controllers\TapAnimationController.cs" />
     <Compile Include="Assets\Scripts\Controllers\WordShredController.cs" />
@@ -657,7 +658,6 @@
     <Reference Include="Boo.Lang">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
-    <None Include="Assets\Resources\Words\WordDictionary.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
