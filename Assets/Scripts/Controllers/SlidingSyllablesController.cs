@@ -13,11 +13,6 @@ public class SlidingSyllablesController : MonoBehaviour
     private Vector2 movement = new Vector2(-1f, 0f);
     private bool activated = false;
 
-    private void Start()
-    {
-        List<string> word = new List<string>() { "hel", "-lo" };
-        InitializeSlidingSyllables(word);
-    }
 
     public void InitializeSlidingSyllables(List<string> syllablesList)
     {
@@ -25,21 +20,19 @@ public class SlidingSyllablesController : MonoBehaviour
         {
             TextMeshProUGUI word = syllable.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>();
             word.SetText(syllablesList[i]);
+
             if (i < syllablesList.Count - 1)
             {
-                Debug.Log(syllablesList[i + 1]);
                 syllable = Instantiate(syllable, GetComponent<RectTransform>());
                 syllable.transform.localPosition = Vector2.zero;
                 syllable.transform.localPosition = new Vector2(
-                    syllable.transform.localPosition.x + 485f,
+                    syllable.transform.localPosition.x + (485f * (i + 1)),
                     syllable.transform.localPosition.y
                 );
             }
         }
         activated = true;
     }
-
-
 
 
     private void FixedUpdate()

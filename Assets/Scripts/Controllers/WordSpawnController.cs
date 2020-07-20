@@ -65,7 +65,7 @@ public class WordSpawnController : MonoBehaviour
             SpawnSingleSyllableWord("hi");
         } else if (Input.GetKeyDown("2"))
         {
-            SpawnMultiSyllableWord("hel-lo");
+            SpawnMultiSyllableWord("va-ca-tion");
         }
 
     }
