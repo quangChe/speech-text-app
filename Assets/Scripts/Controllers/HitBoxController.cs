@@ -26,8 +26,24 @@ public class HitBoxController : MonoBehaviour
             mic.ToggleMicrophone();
             StartCoroutine(tapAnimation.AnimateTapping());
             focusedWords.Add(other);
-            Debug.Log(other.gameObject.transform.parent.gameObject.name == "SlidingWord(Clone)");
+            amplitudeSpikeCount = 0;
+            amplitudeSpikeCountTarget = 10;
             StartCoroutine(StartDetection(other));
+            GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
+            lightBubble.SetActive(true);
+        } else if (other.gameObject.name == "SyllablesCollider")
+        {
+            int numberOfSyllables = other.gameObject.transform.parent.childCount - 1;
+            mic.ToggleMicrophone();
+            focusedWords.Add(other);
+            amplitudeSpikeCount = 0;
+            amplitudeSpikeCountTarget = 10 * numberOfSyllables;
+            Debug.Log("Started!");
+            StartCoroutine(StartDetection(other));
+        }
+        else if (other.gameObject.name == "SingleSyllableCollider")
+        {
+            StartCoroutine(tapAnimation.AnimateTapping());
             GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
             lightBubble.SetActive(true);
         }
@@ -52,6 +68,7 @@ public class HitBoxController : MonoBehaviour
             if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f && !filtering)
             {
                 filtering = true;
+                Debug.Log("RAN!");
                 InvokeRepeating("FiterAudio", 0f, timeBetweenChecks);
             }
 
@@ -61,8 +78,7 @@ public class HitBoxController : MonoBehaviour
 
     private void FiterAudio()
     {
-
-        if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
+        if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f && !filtering)
         {
             amplitudeSpikeCount++;
             if (amplitudeSpikeCount >= amplitudeSpikeCountTarget)
@@ -73,6 +89,7 @@ public class HitBoxController : MonoBehaviour
 
     private void RegisterHit()
     {
+        Debug.Log("HIT!");
         CancelInvoke("FilterAudio");
         filtering = false;
         amplitudeSpikeCount = 0;
