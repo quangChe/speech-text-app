@@ -7,8 +7,8 @@ public class WordSpawnController : MonoBehaviour
     public RectTransform rect;
     public GameObject fretBoard;
     public GameObject slidingWordPrefab;
+    public GameObject slidingSyllablesPrefab;
     private GameObject wordClone;
-    private SlidingWordController wordController;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +24,13 @@ public class WordSpawnController : MonoBehaviour
             wordClone.transform.localPosition.x + 525f,
             wordClone.transform.localPosition.y
         );
-        wordController = wordClone.GetComponent<SlidingWordController>();
-        wordController.InitializeSlidingWord(word);
+        wordClone.GetComponent<SlidingWordController>().InitializeSlidingWord(word);
     }
 
     private void SpawnMultiSyllableWord(string word)
     {
-        
+        wordClone = Instantiate(slidingSyllablesPrefab, GetComponent<RectTransform>());
+        //wordClone.transform
     }
 
     private void Update()

@@ -15,19 +15,31 @@ public class SlidingSyllablesController : MonoBehaviour
 
     private void Start()
     {
-
         List<string> word = new List<string>() { "hel", "-lo" };
-        for (var i = 0; i < word.Count; i++) {
-
-        }
         InitializeSlidingSyllables(word);
     }
 
-    public void InitializeSlidingSyllables(List<string> syllables)
+    public void InitializeSlidingSyllables(List<string> syllablesList)
     {
-        //textBox.text = word;
-        //activated = true;
+        for (var i = 0; i < syllablesList.Count; i++)
+        {
+            TextMeshProUGUI word = syllable.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>();
+            word.SetText(syllablesList[i]);
+            if (i < syllablesList.Count - 1)
+            {
+                Debug.Log(syllablesList[i + 1]);
+                syllable = Instantiate(syllable, GetComponent<RectTransform>());
+                syllable.transform.localPosition = Vector2.zero;
+                syllable.transform.localPosition = new Vector2(
+                    syllable.transform.localPosition.x + 485f,
+                    syllable.transform.localPosition.y
+                );
+            }
+        }
+        activated = true;
     }
+
+
 
 
     private void FixedUpdate()
