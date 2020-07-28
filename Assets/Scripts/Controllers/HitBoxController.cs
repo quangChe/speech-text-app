@@ -6,17 +6,19 @@ public class HitBoxController : MonoBehaviour
 {
     public TapAnimationController tapAnimation;
     public MicrophoneComponent mic;
-    public List<Collider2D> focusedWords = new List<Collider2D>();
     public AudioSource successSound;
 
     private bool filtering = false;
+    private List<Collider2D> singleSyllableWords = new List<Collider2D>();
+    private List<Collider2D> multiSyllableWords = new List<Collider2D>();
+    private int numberOfSyllables = 0;
 
     /* These are numbers to adjust depending on sampling rate of device */
     private float timeBetweenChecks = 0.02f;
-        // - Adjust this number to specify how often to listen for amplitude spike
+        // - Adjust this number to change timing between spike checks (how often to listen for amplitude spike)
     private int amplitudeSpikeCount = 0;
-        // - Count of spikes each check
-    private int amplitudeSpikeCountTarget = 10;
+        // - Count spikes during each spike check
+    private int amplitudeSpikeCountTarget = 1;
         // - Number of spikes to confirm persistent sound (speech) rather than short spikes (taps)
 
     void OnTriggerEnter2D(Collider2D other)
@@ -25,21 +27,24 @@ public class HitBoxController : MonoBehaviour
         {
             mic.ToggleMicrophone();
             StartCoroutine(tapAnimation.AnimateTapping());
-            focusedWords.Add(other);
+            singleSyllableWords.Add(other);
             amplitudeSpikeCount = 0;
             amplitudeSpikeCountTarget = 10;
-            StartCoroutine(StartDetection(other));
+            StartCoroutine(SingleSyllableDetection(other));
             GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
             lightBubble.SetActive(true);
-        } else if (other.gameObject.name == "SyllablesCollider")
+        }
+        else if (other.gameObject.name == "SyllablesCollider")
         {
             int numberOfSyllables = other.gameObject.transform.parent.childCount - 1;
-            mic.ToggleMicrophone();
-            focusedWords.Add(other);
-            amplitudeSpikeCount = 0;
-            amplitudeSpikeCountTarget = 10 * numberOfSyllables;
-            Debug.Log("Started!");
-            StartCoroutine(StartDetection(other));
+            // Minus 1 for SyllableCollider game object -- all other children are Syllables
+            Debug.Log(numberOfSyllables)
+            //mic.ToggleMicrophone();
+            //singleSyllableWords.Add(other);
+            //amplitudeSpikeCount = 0;
+            //amplitudeSpikeCountTarget = 10 * numberOfSyllables;
+            //Debug.Log("Started!");
+            //StartCoroutine(StartDetection(other));
         }
         else if (other.gameObject.name == "SingleSyllableCollider")
         {
@@ -53,17 +58,17 @@ public class HitBoxController : MonoBehaviour
     {
         if (other.gameObject.name == "WordCollider")
         {
-            focusedWords.RemoveAt(0);
+            singleSyllableWords.RemoveAt(0);
             mic.ToggleMicrophone();
             GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
             lightBubble.SetActive(false);
         }
     }
 
-    private IEnumerator StartDetection(Collider2D other)
+    private IEnumerator SingleSyllableDetection(Collider2D other)
     {
 
-        while (focusedWords.Count > 0 && other == focusedWords[0])
+        while (singleSyllableWords.Count > 0 && other == singleSyllableWords[0])
         {
             if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f && !filtering)
             {
@@ -78,9 +83,10 @@ public class HitBoxController : MonoBehaviour
 
     private void FiterAudio()
     {
-        if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f && !filtering)
+        if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
         {
             amplitudeSpikeCount++;
+            Debug.Log(amplitudeSpikeCount);
             if (amplitudeSpikeCount >= amplitudeSpikeCountTarget)
                 RegisterHit();
         }
@@ -89,11 +95,11 @@ public class HitBoxController : MonoBehaviour
 
     private void RegisterHit()
     {
-        Debug.Log("HIT!");
         CancelInvoke("FilterAudio");
         filtering = false;
         amplitudeSpikeCount = 0;
-        Destroy(focusedWords[0].transform.parent.gameObject);
+        Destroy(singleSyllableWords[0].transform.parent.gameObject);
+        successSound.Play();
     }
 
 }

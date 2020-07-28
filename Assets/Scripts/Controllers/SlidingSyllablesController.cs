@@ -12,7 +12,7 @@ public class SlidingSyllablesController : MonoBehaviour
 
     private Vector2 movement = new Vector2(-1f, 0f);
     private bool activated = false;
-
+    private float shiftSyllableRight = 485f;
 
     public void InitializeSlidingSyllables(List<string> syllablesList)
     {
@@ -26,7 +26,7 @@ public class SlidingSyllablesController : MonoBehaviour
                 syllable = Instantiate(syllable, GetComponent<RectTransform>());
                 syllable.transform.localPosition = Vector2.zero;
                 syllable.transform.localPosition = new Vector2(
-                    syllable.transform.localPosition.x + (485f * (i + 1)),
+                    syllable.transform.localPosition.x + (shiftSyllableRight * (i + 1)),
                     syllable.transform.localPosition.y
                 );
             }
