@@ -33,8 +33,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -237.3, y: 0.001255}
-  m_SizeDelta: {x: 50.3, y: 476.31}
+  m_AnchoredPosition: {x: -20, y: -0.0050315}
+  m_SizeDelta: {x: 485, y: 476.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &8399647812272912068
 BoxCollider2D:
@@ -60,7 +60,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 50, y: 476.31}
+  m_Size: {x: 485, y: 476.31}
   m_EdgeRadius: 0
 --- !u!1 &4253596523382176564
 GameObject:

@@ -12,13 +12,15 @@ public class HitBoxController : MonoBehaviour
     private List<Collider2D> singleSyllableWords = new List<Collider2D>();
     private List<Collider2D> multiSyllableWords = new List<Collider2D>();
     private int numberOfSyllables = 0;
+    private int syllableTracker = 0;
+    private int syllablesHit = 0;
 
     /* These are numbers to adjust depending on sampling rate of device */
     private float timeBetweenChecks = 0.02f;
         // - Adjust this number to change timing between spike checks (how often to listen for amplitude spike)
     private int amplitudeSpikeCount = 0;
         // - Count spikes during each spike check
-    private int amplitudeSpikeCountTarget = 1;
+    private int amplitudeSpikeCountTarget = 10;
         // - Number of spikes to confirm persistent sound (speech) rather than short spikes (taps)
 
     void OnTriggerEnter2D(Collider2D other)
@@ -29,41 +31,26 @@ public class HitBoxController : MonoBehaviour
             StartCoroutine(tapAnimation.AnimateTapping());
             singleSyllableWords.Add(other);
             amplitudeSpikeCount = 0;
-            amplitudeSpikeCountTarget = 10;
             StartCoroutine(SingleSyllableDetection(other));
             GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
             lightBubble.SetActive(true);
         }
         else if (other.gameObject.name == "SyllablesCollider")
         {
-            int numberOfSyllables = other.gameObject.transform.parent.childCount - 1;
+            numberOfSyllables = other.gameObject.transform.parent.childCount - 1;
             // Minus 1 for SyllableCollider game object -- all other children are Syllables
-            Debug.Log(numberOfSyllables)
-            //mic.ToggleMicrophone();
-            //singleSyllableWords.Add(other);
-            //amplitudeSpikeCount = 0;
-            //amplitudeSpikeCountTarget = 10 * numberOfSyllables;
-            //Debug.Log("Started!");
-            //StartCoroutine(StartDetection(other));
+            mic.ToggleMicrophone();
+            amplitudeSpikeCount = 0;
         }
         else if (other.gameObject.name == "SingleSyllableCollider")
         {
+            Debug.Log("ON");
             StartCoroutine(tapAnimation.AnimateTapping());
             GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
             lightBubble.SetActive(true);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.name == "WordCollider")
-        {
-            singleSyllableWords.RemoveAt(0);
-            mic.ToggleMicrophone();
-            GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
-            lightBubble.SetActive(false);
-        }
-    }
 
     private IEnumerator SingleSyllableDetection(Collider2D other)
     {
@@ -100,6 +87,21 @@ public class HitBoxController : MonoBehaviour
         amplitudeSpikeCount = 0;
         Destroy(singleSyllableWords[0].transform.parent.gameObject);
         successSound.Play();
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.name == "WordCollider")
+        {
+            singleSyllableWords.RemoveAt(0);
+            mic.ToggleMicrophone();
+            GameObject lightBubble = other.transform.parent.GetChild(2).transform.gameObject;
+            lightBubble.SetActive(false);
+        }
+        else if (other.gameObject.name == "SingleSyllableCollider")
+        {
+            Debug.Log("OFF");
+        }
     }
 
 }
