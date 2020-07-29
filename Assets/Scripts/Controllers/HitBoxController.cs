@@ -8,7 +8,10 @@ public class HitBoxController : MonoBehaviour
     public MicrophoneComponent mic;
     public AudioSource successSound;
 
+    private enum FilterStates { SingleSyllable, MultiSyllable };
+    private FilterStates filterState;
     private bool filtering = false;
+
     private List<Collider2D> singleSyllableWords = new List<Collider2D>();
     private List<Collider2D> multiSyllableWords = new List<Collider2D>();
     private int numberOfSyllables = 0;
@@ -39,6 +42,7 @@ public class HitBoxController : MonoBehaviour
         {
             numberOfSyllables = other.gameObject.transform.parent.childCount - 1;
             // Minus 1 for SyllableCollider game object -- all other children are Syllables
+
             mic.ToggleMicrophone();
             amplitudeSpikeCount = 0;
         }
@@ -60,7 +64,6 @@ public class HitBoxController : MonoBehaviour
             if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f && !filtering)
             {
                 filtering = true;
-                Debug.Log("RAN!");
                 InvokeRepeating("FiterAudio", 0f, timeBetweenChecks);
             }
 
@@ -73,7 +76,6 @@ public class HitBoxController : MonoBehaviour
         if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
         {
             amplitudeSpikeCount++;
-            Debug.Log(amplitudeSpikeCount);
             if (amplitudeSpikeCount >= amplitudeSpikeCountTarget)
                 RegisterHit();
         }
