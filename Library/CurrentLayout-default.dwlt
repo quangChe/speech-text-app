@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 12003, y: 14042}
   vertical: 1
-  controlID: 42
+  controlID: 103
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 221}
   m_MaxSize: {x: 12003, y: 4021}
   vertical: 0
-  controlID: 43
+  controlID: 104
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,17 +278,17 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 1
   m_WindowGUID: 5f472afe321074d1ebc3b6fd151ccc09
-  m_Gizmos: 1
-  m_SceneIsLit: 0
+  m_Gizmos: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1890.9117, y: 554.49396, z: -43.532185}
+    m_Target: {x: -1.2815528, y: -0.91027904, z: 836.23175}
     speed: 2
-    m_Value: {x: -1.979666, y: -2.3350213, z: 91.829094}
+    m_Value: {x: -1.2815528, y: -0.91027904, z: 836.23175}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -338,9 +338,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 756.9008
+    m_Target: 12.387424
     speed: 2
-    m_Value: 27.600008
+    m_Value: 12.537877
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -394,9 +394,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5a660000
-      m_LastClickedID: 26202
-      m_ExpandedIDs: b2a0ffffc0a0ffff4066000060660000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2649ffffd64fffff6655ffffc663ffffcc6bffff3876ffffb076fffff27affffee7bffffda7cffff8094ffffe4b0ffff78d0ffffa4d0ffffd0d0ffffded0ffff8adeffff58e0ffffece1ffffc8e8fffff4e8ffff20e9ffff2ee9ffff58fbffff66340000803400008e670000586800000e6900001e69000026690000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -412,7 +412,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 7}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -635,7 +635,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 162.00256
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -701,31 +701,31 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Gameplay
+    - Assets/Sprites
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Gameplay
+  - Assets/Sprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/q/Desktop/FlintRehab/Unity/SpeechHero
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 161.99982}
-    m_SelectedIDs: ac350000
-    m_LastClickedID: 13740
-    m_ExpandedIDs: 000000008c3500008e35000090350000923500009435000096350000983500009a3500009c35000000ca9a3b
+    scrollPos: {x: 0, y: 222}
+    m_SelectedIDs: fc350000
+    m_LastClickedID: 13820
+    m_ExpandedIDs: 00000000c8350000ca350000cc350000ce350000d0350000d2350000d4350000d6350000d835000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Gameplay
-      m_OriginalName: Gameplay
+      m_Name: Scripts
+      m_OriginalName: Scripts
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13740
+      m_UserData: 13784
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -742,7 +742,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c3500008e35000090350000923500009435000096350000983500009a3500009c350000
+    m_ExpandedIDs: 00000000c8350000ca350000cc350000ce350000d0350000d2350000d4350000d6350000d8350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -773,20 +773,20 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300007a1101005a68010002400000262e00009e2f0000742e00009e30000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: SlidingSyllablesController
-      m_OriginalName: SlidingSyllablesController
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 22624
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
