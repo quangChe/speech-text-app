@@ -15,8 +15,8 @@ public class HitBoxController : MonoBehaviour
 
     private Collider2D wordInFocus;
     private int targetSyllables = 0;
-    private int currentSyllable = 0;
     private int syllablesHit = 0;
+    private bool syllableAlreadyHit = false;
 
     /* These are numbers to adjust depending on sampling rate of device */
     private float timeBetweenChecks = 0.02f;
@@ -34,50 +34,57 @@ public class HitBoxController : MonoBehaviour
 
         if (collision.gameObject.name == "WordCollider")
         {
-            StartSingleSyllableFilterMode();
+            amplitudeSpikeCount = 0;
+            ListenForSingleSyllable();
         }
         else if (collision.gameObject.name == "SyllablesCollider")
         {
-            targetSyllables = collision.gameObject.transform.parent.childCount - 1;
-            // Minus 1 for SyllableCollider game object -- all other children are Syllables
-
-            mic.ToggleMicrophone();
-            amplitudeSpikeCount = 0;
+            ListenForMultipleSyllables();
         }
         else if (collision.gameObject.name == "SingleSyllableCollider")
         {
-            currentSyllable++;
-            StartCoroutine(tapAnimation.AnimateTapping());
-            GameObject lightBubble = wordInFocus.transform.parent.GetChild(2).transform.gameObject;
-            lightBubble.SetActive(true);
+            syllableAlreadyHit = false; // This is used to make sure only 1 syllable is attempted at a time 
+            RunAnimations();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "WordCollider")
+        if (collision.gameObject.name == "WordCollider" || collision.gameObject.name == "SyllablesCollider")
         {
-            EndSingleSyllableFilterMode();
-        }
-        else if (collision.gameObject.name == "SingleSyllableCollider")
-        {
-            Debug.Log("OFF");
+            StopListening();
         }
     }
 
-
-    private void StartSingleSyllableFilterMode()
+    private void RunAnimations()
     {
-        filtering = true;
-        filterState = FilterStates.SingleSyllable;
-        mic.ToggleMicrophone();
         StartCoroutine(tapAnimation.AnimateTapping());
-        StartCoroutine(SingleSyllableDetection());
         wordInFocus.transform.parent.GetChild(2).transform.gameObject.SetActive(true);
     }
 
+    private void ListenForSingleSyllable()
+    {
+        filtering = true;
+        filterState = FilterStates.SingleSyllable;
 
-    private IEnumerator SingleSyllableDetection()
+        mic.ToggleMicrophone();
+        
+        StartCoroutine(RunDetection());
+        RunAnimations();
+    }
+
+    private void ListenForMultipleSyllables()
+    {
+        filtering = true;
+        filterState = FilterStates.MultiSyllable;
+        targetSyllables = wordInFocus.gameObject.transform.parent.childCount - 1; // Minus 1 for SyllablesCollider game object -- all other children are Syllables
+
+        mic.ToggleMicrophone();
+        StartCoroutine(RunDetection());
+    }
+
+
+    private IEnumerator RunDetection()
     {
         while (filtering)
         {
@@ -86,6 +93,7 @@ public class HitBoxController : MonoBehaviour
 
             yield return null;
         }
+
     }
 
     private void FiterAudio()
@@ -95,29 +103,44 @@ public class HitBoxController : MonoBehaviour
         if (mic.MicrophoneLevelMax() < 0f && mic.MicrophoneLevelMax() > -50f)
         {
             amplitudeSpikeCount++;
-            if (amplitudeSpikeCount >= amplitudeSpikeCountTarget)
-                RegisterHit();
-        }
 
+            if (amplitudeSpikeCount >= amplitudeSpikeCountTarget)
+            {
+                if (filterState == FilterStates.SingleSyllable)
+                    RegisterHit();
+                else if (filterState == FilterStates.MultiSyllable && !syllableAlreadyHit)
+                    RegisterSyllable();
+            }
+        }
     }
+
+    private void RegisterSyllable()
+    {
+        syllablesHit++;
+        syllableAlreadyHit = true;
+        amplitudeSpikeCount = 0; // Reset to prep for next syllable
+        Debug.Log("HIT!");
+    }
+
 
     private void RegisterHit()
     {
         CancelInvoke("FilterAudio");
         filtering = false;
         filterBusy = false;
-        amplitudeSpikeCount = 0;
         Destroy(wordInFocus.transform.parent.gameObject);
         successSound.Play();
     }
 
-    private void EndSingleSyllableFilterMode()
+    private void StopListening()
     {
+        Debug.Log("STOPPED!");
         CancelInvoke("FilterAudio");
         filtering = false;
         filterBusy = false;
-        amplitudeSpikeCount = 0;
         mic.ToggleMicrophone();
-        wordInFocus.transform.parent.GetChild(2).transform.gameObject.SetActive(false);
+
+        if (filterState == FilterStates.SingleSyllable)
+            wordInFocus.transform.parent.GetChild(2).transform.gameObject.SetActive(false);
     }
 }
