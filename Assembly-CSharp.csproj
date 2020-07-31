@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Controllers\TapAnimationController.cs" />
     <Compile Include="Assets\Scripts\Controllers\WordShredController.cs" />
     <Compile Include="Assets\Scripts\Controllers\WordSpawnController.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameplayInfoManager.cs" />
     <Compile Include="Assets\Scripts\Microphone\MicrophoneComponent.cs" />
     <Compile Include="Assets\Scripts\STT\STTComponent.cs" />
     <Compile Include="Assets\Scripts\STT\SpeechRecognizer.cs" />
