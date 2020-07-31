@@ -7,6 +7,7 @@ public class HitBoxController : MonoBehaviour
     public TapAnimationController tapAnimation;
     public MicrophoneComponent mic;
     public AudioSource successSound;
+    public GameplayInfoManager gameplayInfoManager;
 
     private enum FilterStates { SingleSyllable, MultiSyllable };
     private FilterStates filterState;
@@ -138,6 +139,7 @@ public class HitBoxController : MonoBehaviour
             Destroy(wordInFocus.transform.parent.gameObject.transform.parent.gameObject);
 
         successSound.Play();
+        gameplayInfoManager.IncrementHit();
     }
 
     private void StopListening()

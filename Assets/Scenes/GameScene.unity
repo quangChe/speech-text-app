@@ -277,6 +277,7 @@ MonoBehaviour:
   tapAnimation: {fileID: 1942595814}
   mic: {fileID: 261824552}
   successSound: {fileID: 41956811}
+  gameplayInfoManager: {fileID: 1973159369}
 --- !u!82 &41956811
 AudioSource:
   m_ObjectHideFlags: 0

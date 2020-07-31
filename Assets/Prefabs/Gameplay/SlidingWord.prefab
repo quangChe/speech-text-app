@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717a41772bf3046dbbacf46fa6d429b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideSpeed: 2
+  slideSpeed: 3
   rb: {fileID: 7996197433084702988}
   textBox: {fileID: 7996197432968267172}
 --- !u!50 &7996197433084702988
