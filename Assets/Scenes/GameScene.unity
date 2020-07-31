@@ -237,7 +237,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tapAnimation: {fileID: 1942595814}
   mic: {fileID: 261824552}
-  focusedWords: []
   successSound: {fileID: 41956811}
 --- !u!82 &41956811
 AudioSource:
@@ -1466,7 +1465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1849, y: 0.00000047688}
+  m_AnchoredPosition: {x: -8000, y: 0.00000047688}
   m_SizeDelta: {x: 50, y: 476.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1731644402

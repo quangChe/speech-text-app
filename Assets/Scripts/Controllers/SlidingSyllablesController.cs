@@ -31,6 +31,16 @@ public class SlidingSyllablesController : MonoBehaviour
                 );
             }
         }
+
+        float additionalWidth = (syllablesList.Count - 1) * shiftSyllableRight;
+        float additionalOffset = (syllablesList.Count - 2) * shiftSyllableRight;
+        BoxCollider2D syllablesCollider =
+            gameObject.transform.GetChild(0).gameObject.GetComponent<BoxCollider2D>();
+        syllablesCollider.size = new Vector2(
+            syllablesCollider.size.x + additionalWidth, syllablesCollider.size.y);
+        syllablesCollider.offset = new Vector2(
+            syllablesCollider.offset.x + additionalOffset, syllablesCollider.offset.y);
+
         activated = true;
     }
 

@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8fd798d6cea48e383557f332306409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideSpeed: 5
+  slideSpeed: 2
   rb: {fileID: 7996197433084702988}
   syllable: {fileID: 4253596523382176564}
 --- !u!1 &7996197434111048752

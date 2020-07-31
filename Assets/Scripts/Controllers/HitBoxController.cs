@@ -17,6 +17,7 @@ public class HitBoxController : MonoBehaviour
     private int targetSyllables = 0;
     private int syllablesHit = 0;
     private bool syllableAlreadyHit = false;
+    private bool resetRan = false;
 
     /* These are numbers to adjust depending on sampling rate of device */
     private float timeBetweenChecks = 0.02f;
@@ -31,10 +32,9 @@ public class HitBoxController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         wordInFocus = collision;
-
+     
         if (collision.gameObject.name == "WordCollider")
         {
-            amplitudeSpikeCount = 0;
             ListenForSingleSyllable();
         }
         else if (collision.gameObject.name == "SyllablesCollider")
@@ -43,15 +43,18 @@ public class HitBoxController : MonoBehaviour
         }
         else if (collision.gameObject.name == "SingleSyllableCollider")
         {
+            amplitudeSpikeCount = 0;
             syllableAlreadyHit = false; // This is used to make sure only 1 syllable is attempted at a time 
             RunAnimations();
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private IEnumerator OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "WordCollider" || collision.gameObject.name == "SyllablesCollider")
+        if (collision.gameObject.name == "WordCollider"
+            || collision.gameObject.name == "SyllablesCollider")
         {
+            yield return new WaitForSeconds(0.5f);
             StopListening();
         }
     }
@@ -118,29 +121,48 @@ public class HitBoxController : MonoBehaviour
     {
         syllablesHit++;
         syllableAlreadyHit = true;
-        amplitudeSpikeCount = 0; // Reset to prep for next syllable
-        Debug.Log("HIT!");
+        amplitudeSpikeCount = 0; // Reset to here prep for next syllable
+
+        if (syllablesHit == targetSyllables)
+            RegisterHit();
     }
 
 
     private void RegisterHit()
     {
-        CancelInvoke("FilterAudio");
-        filtering = false;
-        filterBusy = false;
-        Destroy(wordInFocus.transform.parent.gameObject);
+        Reset();
+
+        if (filterState == FilterStates.SingleSyllable)
+            Destroy(wordInFocus.transform.parent.gameObject);
+        else if (filterState == FilterStates.MultiSyllable)
+            Destroy(wordInFocus.transform.parent.gameObject.transform.parent.gameObject);
+
         successSound.Play();
     }
 
     private void StopListening()
     {
-        Debug.Log("STOPPED!");
-        CancelInvoke("FilterAudio");
-        filtering = false;
-        filterBusy = false;
-        mic.ToggleMicrophone();
+        Reset();
 
-        if (filterState == FilterStates.SingleSyllable)
+        if (filterState == FilterStates.SingleSyllable && wordInFocus)
             wordInFocus.transform.parent.GetChild(2).transform.gameObject.SetActive(false);
+    }
+
+    private void Reset()
+    {
+        if (!resetRan)
+        {
+            resetRan = true;
+            CancelInvoke("FilterAudio");
+            mic.ToggleMicrophone();
+            filtering = false;
+            filterBusy = false;
+            amplitudeSpikeCount = 0;
+            syllablesHit = 0;
+        } else
+        {
+            resetRan = false;
+        }
+
     }
 }
