@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/WordShredController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/GameplayInfoManager.cs">
     <Files>
       <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
       <File FileName="Assets/Scripts/TTS/TTSComponent.cs" />
@@ -9,13 +9,29 @@
       <File FileName="Assets/Scripts/TTS/Singleton.cs" />
       <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" />
       <File FileName="Assets/Scripts/Controllers/SlidingWordController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/TapAnimationController.cs" />
-      <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" />
-      <File FileName="Assets/Scripts/Controllers/SlidingSyllablesController.cs" />
+      <File FileName="Assets/Scripts/Controllers/TapAnimationController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/SlidingSyllablesController.cs" Line="43" Column="1" />
       <File FileName="Assets/Scripts/Controllers/WordShredController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" />
-      <File FileName="Assets/Scripts/STT/SpeechRecognizer.cs" />
+      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="44" Column="24" />
+      <File FileName="Assets/Scripts/STT/SpeechRecognizer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/GameplayInfoManager.cs" Line="9" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SpeechHero" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Managers" expanded="True">
+                  <Node name="GameplayInfoManager.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
