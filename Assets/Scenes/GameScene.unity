@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &52947803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232503249035745193, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232503248252690477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &311306656
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,9 +210,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &358470472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232503247603867369, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232503248252690477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &365015794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232503247404756105, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232503248252690477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &551331817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232503248351152216, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232503248252690477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &665879346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232503247788262436, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232503248252690477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &665879347 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5232503247788262439, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232503248252690477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &665879348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665879346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849b6802f220b40d89aa8df82833e868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect: {fileID: 665879347}
+  fretBoard: {fileID: 358470472}
+  slidingWordPrefab: {fileID: 7996197433084702990, guid: 104c33efbc36248978e262227a0d6563,
+    type: 3}
+  slidingSyllablesPrefab: {fileID: 7996197433084702990, guid: af7cd6d4d83064043ab17c525411dfa2,
+    type: 3}
+--- !u!1 &842503886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232503248340232457, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232503248252690477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &967605957 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5232503247603867368, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232503248252690477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1271153056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232503249090820878, guid: 129aa58a9345b4072bc6aebae2f81f7c,
     type: 3}
   m_PrefabInstance: {fileID: 5232503248252690477}
   m_PrefabAsset: {fileID: 0}
@@ -383,6 +449,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1664698927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232503249182960307, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232503248252690477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1973159366 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7973603151222414968, guid: adb98c42071794a5eb82a1f3d534e676,
@@ -401,6 +473,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bcbecbbe4c754e448c5faa8e1012592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &2061419160 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5232503248516303048, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232503248252690477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5232503248252690477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -523,7 +601,53 @@ PrefabInstance:
       propertyPath: gameplayInfoManager
       value: 
       objectReference: {fileID: 1973159369}
-    m_RemovedComponents: []
+    - target: {fileID: 5232503248311992325, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+        type: 3}
+      propertyPath: decibalText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232503248516303051, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+        type: 3}
+      propertyPath: path.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232503248516303051, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+        type: 3}
+      propertyPath: hand
+      value: 
+      objectReference: {fileID: 365015794}
+    - target: {fileID: 5232503248516303051, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+        type: 3}
+      propertyPath: textPrompt
+      value: 
+      objectReference: {fileID: 1664698927}
+    - target: {fileID: 5232503248516303051, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+        type: 3}
+      propertyPath: tapVisual
+      value: 
+      objectReference: {fileID: 842503886}
+    - target: {fileID: 5232503248516303051, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+        type: 3}
+      propertyPath: drumSound
+      value: 
+      objectReference: {fileID: 2061419160}
+    - target: {fileID: 5232503248516303051, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+        type: 3}
+      propertyPath: path.Array.data[0]
+      value: 
+      objectReference: {fileID: 1271153056}
+    - target: {fileID: 5232503248516303051, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+        type: 3}
+      propertyPath: path.Array.data[1]
+      value: 
+      objectReference: {fileID: 551331817}
+    - target: {fileID: 5232503248516303051, guid: 129aa58a9345b4072bc6aebae2f81f7c,
+        type: 3}
+      propertyPath: path.Array.data[2]
+      value: 
+      objectReference: {fileID: 52947803}
+    m_RemovedComponents:
+    - {fileID: 5232503247788262438, guid: 129aa58a9345b4072bc6aebae2f81f7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 129aa58a9345b4072bc6aebae2f81f7c, type: 3}
 --- !u!1001 &7551934231917192605
 PrefabInstance:

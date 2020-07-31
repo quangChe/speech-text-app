@@ -414,10 +414,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7996197433084702990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 717a41772bf3046dbbacf46fa6d429b2, type: 3}
+  m_Script: {fileID: 11500000, guid: ca7367168850948c9b842364d9941df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideSpeed: 3
+  slideSpeed: 4
   rb: {fileID: 7996197433084702988}
   textBox: {fileID: 7996197432968267172}
 --- !u!50 &7996197433084702988
