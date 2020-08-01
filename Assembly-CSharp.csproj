@@ -63,16 +63,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Controllers\Gameplay\HitBoxController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Gameplay\MicrophoneController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Gameplay\SlidingSyllablesController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Gameplay\SlidingWordController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Gameplay\TapAnimationController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Gameplay\WordShredController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Gameplay\WordSpawnController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Helpers\Singleton.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Loaders\WordLoader.cs" />
-    <Compile Include="Assets\Scripts\Managers\GameplayInfoManager.cs" />
+    <Compile Include="Assets\Scripts\Controllers\GameplayInfoController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\HitBoxController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\MicrophoneController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\SceneController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\SlidingSyllablesController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\SlidingWordController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\TapAnimationController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\WordShredController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\WordSpawnController.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

@@ -1,16 +1,18 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/Helpers/Singleton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/NewMonoBehaviour.cs">
     <Files>
       <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
       <File FileName="Assets/Scripts/TTS/Singleton.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" Line="7" Column="34" />
+      <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" Line="17" Column="38" />
       <File FileName="Assets/Scripts/Controllers/SlidingWordController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controllers/TapAnimationController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" Line="12" Column="1" />
       <File FileName="Assets/Scripts/Controllers/SlidingSyllablesController.cs" Line="43" Column="1" />
       <File FileName="Assets/Scripts/Controllers/WordShredController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="8" Column="37" />
-      <File FileName="Assets/Scripts/Managers/GameplayInfoManager.cs" Line="24" Column="6" />
+      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="10" Column="34" />
+      <File FileName="Assets/Scripts/Managers/NewMonoBehaviour.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/Managers/GameplayInfoManager.cs" Line="10" Column="32" />
+      <File FileName="Assets/Scripts/Controllers/NewMonoBehaviour.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +20,11 @@
           <Node name="SpeechHero" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Controllers" expanded="True" />
+                <Node name="Controllers" expanded="True">
+                  <Node name="NewMonoBehaviour.cs" selected="True" />
+                </Node>
+                <Node name="Helpers" expanded="True" />
+                <Node name="Managers" expanded="True" />
               </Node>
             </Node>
           </Node>
