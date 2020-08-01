@@ -1322,13 +1322,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7973603151222414971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bcbecbbe4c754e448c5faa8e1012592, type: 3}
+  m_Script: {fileID: 11500000, guid: 3027b79059c2e403aa981b28abdbc81e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsUI: {fileID: 7973603149498572261}
-  hitTargetUI: {fileID: 7973603149695332468}
-  timeUI: {fileID: 7973603151460313186}
-  timeTargetUI: {fileID: 7973603150405780288}
+  hitsDisplay: {fileID: 7973603149498572261}
+  hitsTargetDisplay: {fileID: 7973603149695332468}
+  timeDisplay: {fileID: 7973603151460313186}
+  timeTargetDisplay: {fileID: 7973603150405780288}
 --- !u!1 &7973603151460313188
 GameObject:
   m_ObjectHideFlags: 0

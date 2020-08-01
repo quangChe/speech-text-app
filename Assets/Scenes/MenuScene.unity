@@ -891,7 +891,6 @@ GameObject:
   - component: {fileID: 305971636}
   - component: {fileID: 305971635}
   - component: {fileID: 305971637}
-  - component: {fileID: 305971638}
   m_Layer: 5
   m_Name: WordSelection
   m_TagString: Untagged
@@ -968,18 +967,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
---- !u!114 &305971638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305971633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f7b71b63932e4feab5a87f38b850f01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &311306656
 GameObject:
   m_ObjectHideFlags: 0
