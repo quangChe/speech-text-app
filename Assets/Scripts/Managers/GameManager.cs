@@ -23,6 +23,5 @@ public class GameManager : Singleton<GameManager>
     {
         string wordsJsonString = Resources.Load<TextAsset>("Words/WordDictionary").text;
         wordList = JsonConvert.DeserializeObject<Dictionary<string, string[]>>(wordsJsonString);
-        Debug.Log(wordList["Single Syllable"][0]);
     }
 }
