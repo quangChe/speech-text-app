@@ -3,15 +3,13 @@ using System.Collections;
 
 public class PrepSceneManager : MonoBehaviour
 {
-    // Use this for initialization
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
