@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Models/WordProgressModel.cs">
     <Files>
       <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
       <File FileName="Assets/Scripts/TTS/Singleton.cs" Line="1" Column="1" />
@@ -10,11 +10,15 @@
       <File FileName="Assets/Scripts/Controllers/SlidingSyllablesController.cs" Line="43" Column="1" />
       <File FileName="Assets/Scripts/Controllers/WordShredController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="10" Column="34" />
-      <File FileName="Assets/Scripts/Managers/NewMonoBehaviour.cs" Line="11" Column="6" />
+      <File FileName="Assets/Scripts/Managers/NewMonoBehaviour.cs" Line="9" Column="9" />
       <File FileName="Assets/Scripts/Managers/GameplayInfoManager.cs" Line="10" Column="32" />
       <File FileName="Assets/Scripts/Controllers/NewMonoBehaviour.cs" Line="13" Column="30" />
       <File FileName="Assets/Resources/Words/WordDictionary.json" Line="2" Column="6" />
       <File FileName="Assets/Scripts/Managers/SceneManagers/NewMonoBehaviour.cs" Line="14" Column="6" />
+      <File FileName="Assets/Scripts/Models/NewClass.cs" Line="12" Column="31" />
+      <File FileName="Assets/Scripts/Models/NewClass.cs" Line="15" Column="31" />
+      <File FileName="Assets/Scripts/Models/WordProgressModel.cs" Line="10" Column="8" />
+      <File FileName="Assets/Scripts/Models/SessionResultModel.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,7 +31,9 @@
                 <Node name="Helpers" expanded="True" />
                 <Node name="Managers" expanded="True">
                   <Node name="SceneManagers" expanded="True" />
-                  <Node name="GameManager.cs" selected="True" />
+                </Node>
+                <Node name="Models" expanded="True">
+                  <Node name="WordProgressModel.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
