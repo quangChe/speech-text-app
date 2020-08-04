@@ -1,20 +1,20 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Database/Tables/WordProgressTable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Database/Models/SessionResultModel.cs">
     <Files>
-      <File FileName="Assets/Scripts/Controllers/WordShredController.cs" />
-      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" />
-      <File FileName="Assets/Resources/Words/WordDictionary.json" Line="8" Column="34" />
+      <File FileName="Assets/Scripts/Database/Models/SessionResultModel.cs" Line="18" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/Controllers/WordShredController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="10" Column="34" />
+      <File FileName="Assets/Resources/Words/WordDictionary.json" Line="18" Column="41" />
       <File FileName="Assets/Scripts/Database/SQLiteHelper.cs" Line="23" Column="73" />
       <File FileName="Assets/Scripts/Database/Tables/NewClass.cs" Line="99" Column="47" />
       <File FileName="Assets/Scripts/Database/Models/UserModel.cs" Line="10" Column="24" />
-      <File FileName="Assets/Scripts/Database/NewClass.cs" Line="74" Column="14" />
+      <File FileName="Assets/Scripts/Database/NewClass.cs" Line="71" Column="10" />
       <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="31" Column="9" />
       <File FileName="Assets/Scripts/Database/Models/WordCategoryModel.cs" Line="13" Column="59" />
-      <File FileName="Assets/Scripts/Database/Tables/NewClass.cs" Line="33" Column="20" />
+      <File FileName="Assets/Scripts/Database/Tables/NewClass.cs" Line="42" Column="18" />
       <File FileName="Assets/Scripts/Common/Singleton.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Database/Models/WordProgressModel.cs" Line="14" Column="27" />
-      <File FileName="Assets/Scripts/Database/Models/SessionResultModel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Database/Tables/WordProgressTable.cs" Line="49" Column="18" />
+      <File FileName="Assets/Scripts/Database/Tables/WordProgressTable.cs" Line="21" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,14 +24,7 @@
               <Node name="Plugins" expanded="True" />
               <Node name="Resources" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="Common" expanded="True" />
-                <Node name="Controllers" expanded="True" />
-                <Node name="Database" expanded="True">
-                  <Node name="Models" expanded="True" />
-                  <Node name="Tables" expanded="True">
-                    <Node name="WordProgressTable.cs" selected="True" />
-                  </Node>
-                </Node>
+                <Node name="Database" selected="True" />
                 <Node name="Managers" expanded="True">
                   <Node name="SceneManagers" expanded="True" />
                 </Node>
