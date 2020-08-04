@@ -9,14 +9,16 @@ using Newtonsoft.Json;
 public class DatabaseHelper
 {
     private UserTable users;
+    private WordCategoryModel wordCategories;
 
     public UserModel Player { private set; get; }
 
     public DatabaseHelper()
     {
         users = new UserTable();
-
+        
         GetOrCreateUser();
+        GetOrCreateWordCategories();
     }
 
     private void GetOrCreateUser()
@@ -24,6 +26,11 @@ public class DatabaseHelper
         Player = users.GetById(1);
         if (Player == null) CreateDefaultPlayer();
         else UpdateLoginTime();
+    }
+
+    private void GetOrCreateWordCategories()
+    {
+        
     }
 
     private void CreateDefaultPlayer()

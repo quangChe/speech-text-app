@@ -20,7 +20,7 @@ namespace Database
             dbPath = "URI=file:" + Application.persistentDataPath + "/" + dbName;
             dbConnection = new SqliteConnection(dbPath);
             dbConnection.Open();
-            Debug.Log("Opened a connection to " + dbName + " database");
+            Debug.Log("Opened a connection to " + dbName + " database at " + dbPath);
         }
 
         ~SqliteHelper()

@@ -8,13 +8,22 @@ public class GameManager : Singleton<GameManager>
     public enum WordListCategories {
         SingleSyllables, MutiSyllables, EasyPhrases, MediumPhrases, HardPhrases
     }
-    public Dictionary<string, string[]> completeWordList;
-    public string[] selectedWordList = null;
 
+    [System.NonSerialized] public Dictionary<string, string[]> completeWordList;
+
+    [System.NonSerialized] public string[] selectedWordList = null;
+
+    [System.NonSerialized] public DatabaseHelper db;
 
     protected override void OnAwake()
     {
         LoadWords();
+        InitializeDatabase();
+    }
+
+    private void InitializeDatabase()
+    {
+        db = new DatabaseHelper();
     }
 
     private void LoadWords()

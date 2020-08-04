@@ -26,7 +26,7 @@ namespace Database
                     {NAME} TEXT DEFAULT NULL,
                     {TOTAL_REPS} INTEGER DEFAULT 0, 
                     {TOTAL_STARS} INTEGER DEFAULT 0,
-                    {LAST_LOGIN} DATETIME DEFAULT CURRENT_TIMESTAMP, 
+                    {LAST_LOGIN} DATETIME DEFAULT CURRENT_TIMESTAMP
                 );";
             cmd.ExecuteNonQuery();
         }
