@@ -17,8 +17,8 @@ public class GameManager : Singleton<GameManager>
 
     protected override void OnAwake()
     {
-        LoadWords();
         InitializeDatabase();
+        LoadWords();
     }
 
     private void InitializeDatabase()

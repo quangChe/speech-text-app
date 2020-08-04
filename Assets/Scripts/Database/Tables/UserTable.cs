@@ -12,7 +12,7 @@ namespace Database
         private const string TABLE_NAME = "Users";
 
         private const string NAME = "name";
-        private const string TOTAL_REPS = "total_reps";
+        private const string WORDS_HIT = "words_hit";
         private const string TOTAL_STARS = "total_stars";
         private const string LAST_LOGIN = "last_login";
 
@@ -24,7 +24,7 @@ namespace Database
                 (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     {NAME} TEXT DEFAULT NULL,
-                    {TOTAL_REPS} INTEGER DEFAULT 0, 
+                    {WORDS_HIT} INTEGER DEFAULT 0, 
                     {TOTAL_STARS} INTEGER DEFAULT 0,
                     {LAST_LOGIN} DATETIME DEFAULT CURRENT_TIMESTAMP
                 );";
@@ -38,13 +38,13 @@ namespace Database
                 $@"INSERT INTO {TABLE_NAME}
                 (
                     {NAME},
-                    {TOTAL_REPS},
+                    {WORDS_HIT},
                     {TOTAL_STARS}
                 ) 
                 VALUES
                 (
                     '{user.name}',
-                    {user.totalReps},
+                    {user.wordsHit},
                     {user.totalStars}
                 );";
             cmd.ExecuteNonQuery();
@@ -69,7 +69,7 @@ namespace Database
                 {
                     id = Convert.ToInt32(reader[0]),
                     name = reader[1].ToString(),
-                    totalReps = Convert.ToInt32(reader[2]),
+                    wordsHit = Convert.ToInt32(reader[2]),
                     totalStars = Convert.ToInt32(reader[3]),
                     lastLogin = reader[4].ToString()
                 };
@@ -96,7 +96,7 @@ namespace Database
                 $@"UPDATE {TABLE_NAME}
                 SET
                     {NAME}='{user.name}',
-                    {TOTAL_REPS}={user.totalReps}, 
+                    {WORDS_HIT}={user.wordsHit}, 
                     {TOTAL_STARS}={user.totalStars}
                 WHERE id={user.id};";
             cmd.ExecuteNonQuery();

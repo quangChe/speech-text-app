@@ -7,7 +7,7 @@ public class UserModel
 {
     public int id = 0;
     public string name = null;
-    public int totalReps = 0;
+    public int wordsHit = 0;
     public int totalStars = 0;
     public string lastLogin = null;
 }
