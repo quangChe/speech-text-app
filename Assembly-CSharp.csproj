@@ -73,11 +73,13 @@
     <Compile Include="Assets\Scripts\Controllers\TapAnimationController.cs" />
     <Compile Include="Assets\Scripts\Controllers\WordShredController.cs" />
     <Compile Include="Assets\Scripts\Controllers\WordSpawnController.cs" />
+    <Compile Include="Assets\Scripts\Database\DatabaseHelper.cs" />
     <Compile Include="Assets\Scripts\Database\Models\SessionResultModel.cs" />
     <Compile Include="Assets\Scripts\Database\Models\UserModel.cs" />
     <Compile Include="Assets\Scripts\Database\Models\WordCategoryModel.cs" />
     <Compile Include="Assets\Scripts\Database\Models\WordProgressModel.cs" />
     <Compile Include="Assets\Scripts\Database\SQLiteHelper.cs" />
+    <Compile Include="Assets\Scripts\Database\Tables\UserTable.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\SceneManagers\PrepSceneManager.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
