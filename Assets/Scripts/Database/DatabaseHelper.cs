@@ -27,7 +27,7 @@ public class DatabaseHelper
         wordProgress = new WordProgressTable(); 
 
         GetOrCreateUser();
-        GetOrCreateWordCategoriesAndProgress();
+        GetOrCreateWordData();
     }
 
     private void GetWordDictionary()
@@ -48,7 +48,7 @@ public class DatabaseHelper
         else UpdateLoginTime();
     }
 
-    private void GetOrCreateWordCategoriesAndProgress()
+    private void GetOrCreateWordData()
     {
         WordCategories = wordCategories.GetByUserId(Player.id);
         if (WordCategories.Count == 0) CreateDefaultWordCategories();
@@ -56,7 +56,6 @@ public class DatabaseHelper
         WordProgress = wordProgress.GetByUserId(Player.id);
         if (WordProgress.Count == 0) CreateDefaultWordProgress();
     }
-
 
     private void CreateDefaultPlayer()
     {
@@ -66,6 +65,7 @@ public class DatabaseHelper
 
     private void CreateDefaultWordCategories()
     {
+        GetWordDictionary();
 
         foreach (string key in WordDict.Keys)
         {
@@ -73,25 +73,24 @@ public class DatabaseHelper
                 userId = Player.id, categoryName = key, starsCollected = 0
             });
         }
+
+        WordCategories = wordCategories.GetByUserId(Player.id);
     }
 
     private void CreateDefaultWordProgress()
     {
-        GetWordDictionary();
-
-        foreach (string key in WordDict.Keys)
+        foreach (WordCategoryModel category in WordCategories)
         {
-            WordCategoryModel category = WordCategories.Find((cat) => cat.categoryName == key);
-            Debug.Log(category.id);
-            foreach (string word in WordDict[key])
+            foreach (string word in WordDict[category.categoryName])
             {
-                Debug.Log(wordProgress);
                 wordProgress.Create(new WordProgressModel {
                     word = word, timesHit = 0, timesAttempted = 0,
                     userId = Player.id, categoryId = category.id
                 });
             }
         }
+
+        WordProgress = wordProgress.GetByUserId(Player.id);
     }
 
 

@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1680
     height: 955
-  m_MinSize: {x: 502, y: 492}
-  m_MaxSize: {x: 12002, y: 14042}
+  m_MinSize: {x: 504, y: 492}
+  m_MaxSize: {x: 12004, y: 14042}
   vertical: 1
-  controlID: 25351
+  controlID: 101
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,10 +138,10 @@ MonoBehaviour:
     y: 0
     width: 1680
     height: 684
-  m_MinSize: {x: 502, y: 221}
-  m_MaxSize: {x: 12002, y: 4021}
+  m_MinSize: {x: 504, y: 221}
+  m_MaxSize: {x: 12004, y: 4021}
   vertical: 0
-  controlID: 25352
+  controlID: 39
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,8 +161,8 @@ MonoBehaviour:
     y: 0
     width: 282
     height: 684
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -216,8 +216,8 @@ MonoBehaviour:
     y: 0
     width: 542
     height: 684
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
@@ -394,9 +394,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fae00000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b416ffff9421ffff0a32fffff433ffffd042ffffd243ffff8c51ffff1052ffff8c5fffff9861ffff9e94ffff4a97ffff9a98ffff60bdffff6abdffff74bdffffc0bdffffd0bdffffd6bdffffe8bdffffeabdffffe2bfffffccc0ffff42c1ffff60c4ffff76c4ffff78c4ffff5ec5ffff12c7fffffec7ffff48caffff64cbffff3accffffa2ccffff04cdffff86cdffff32dcffff4cebffff50ebffff7eebffffd8efffff72f1ffff14f4ffff6efbfffff4ffffff463400008e3400009a340000aa340000523a0000623a00007a3a0000b63a00000e6600004e66000064670000b8690000c46a0000fc6e0000de6f0000f86f00003e83000092870000e6870000ee880000288900007ad100008ed90000acda000098db00009cdb0000aadb0000
+      m_ExpandedIDs: 6efbfffff4ffffff703400007c340000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -634,7 +634,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 57594
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
 --- !u!114 &17
 MonoBehaviour:
@@ -712,23 +712,23 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 154}
-    m_SelectedIDs: 5a350000
-    m_LastClickedID: 13658
-    m_ExpandedIDs: 00000000523500005435000056350000583500005a3500005c3500005e35000060350000623500006a3500007e350000dcc10000dec1000000ca9a3b
+    m_SelectedIDs: 88350000
+    m_LastClickedID: 13704
+    m_ExpandedIDs: 0000000080350000823500008435000086350000883500008a3500008c3500008e350000903500009235000094350000963500009835000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: x64
-      m_OriginalName: x64
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 57576
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -742,7 +742,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000523500005435000056350000583500005a3500005c3500005e35000060350000623500006a3500007e350000dcc10000dec1000000ca9a3b
+    m_ExpandedIDs: 0000000080350000823500008435000086350000883500008a3500008c3500008e3500009035000092350000943500009635000098350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -773,18 +773,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300007a1101005a68010002400000262e00009e2f0000742e00009e30000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Mono.Data.Sqlite
-      m_OriginalName: Mono.Data.Sqlite
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 57594
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
