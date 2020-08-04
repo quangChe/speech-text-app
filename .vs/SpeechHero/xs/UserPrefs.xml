@@ -1,39 +1,32 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Models/WordProgressModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Database/SQLiteHelper.cs">
     <Files>
       <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TTS/Singleton.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Microphone/MicrophoneComponent.cs" Line="17" Column="38" />
-      <File FileName="Assets/Scripts/Controllers/SlidingWordController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/TapAnimationController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" Line="12" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/SlidingSyllablesController.cs" Line="43" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/WordShredController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" Line="10" Column="34" />
-      <File FileName="Assets/Scripts/Managers/NewMonoBehaviour.cs" Line="9" Column="9" />
-      <File FileName="Assets/Scripts/Managers/GameplayInfoManager.cs" Line="10" Column="32" />
-      <File FileName="Assets/Scripts/Controllers/NewMonoBehaviour.cs" Line="13" Column="30" />
-      <File FileName="Assets/Resources/Words/WordDictionary.json" Line="2" Column="6" />
-      <File FileName="Assets/Scripts/Managers/SceneManagers/NewMonoBehaviour.cs" Line="14" Column="6" />
-      <File FileName="Assets/Scripts/Models/NewClass.cs" Line="12" Column="31" />
-      <File FileName="Assets/Scripts/Models/NewClass.cs" Line="15" Column="31" />
-      <File FileName="Assets/Scripts/Models/WordProgressModel.cs" Line="10" Column="8" />
-      <File FileName="Assets/Scripts/Models/SessionResultModel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/SlidingWordController.cs" />
+      <File FileName="Assets/Scripts/Controllers/TapAnimationController.cs" />
+      <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" />
+      <File FileName="Assets/Scripts/Controllers/SlidingSyllablesController.cs" />
+      <File FileName="Assets/Scripts/Controllers/WordShredController.cs" />
+      <File FileName="Assets/Scripts/Controllers/HitBoxController.cs" />
+      <File FileName="Assets/Resources/Words/WordDictionary.json" />
+      <File FileName="Assets/Scripts/Database/SQLiteHelper.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SpeechHero" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Plugins" expanded="True" />
               <Node name="Resources" expanded="True" />
               <Node name="Scripts" expanded="True">
+                <Node name="Common" expanded="True" />
                 <Node name="Controllers" expanded="True" />
-                <Node name="Helpers" expanded="True" />
+                <Node name="Database" expanded="True">
+                  <Node name="Models" expanded="True" />
+                  <Node name="SQLiteHelper.cs" selected="True" />
+                </Node>
                 <Node name="Managers" expanded="True">
                   <Node name="SceneManagers" expanded="True" />
-                </Node>
-                <Node name="Models" expanded="True">
-                  <Node name="WordProgressModel.cs" selected="True" />
                 </Node>
               </Node>
             </Node>

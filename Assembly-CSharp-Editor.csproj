@@ -663,10 +663,11 @@
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Compile Include="Assets\Scripts\Managers\SceneManagers\PrepSceneManager.cs" />
-    <Compile Include="Assets\Scripts\Models\UserModel.cs" />
-    <Compile Include="Assets\Scripts\Models\WordCategoryModel.cs" />
-    <Compile Include="Assets\Scripts\Models\WordProgressModel.cs" />
-    <Compile Include="Assets\Scripts\Models\SessionResultModel.cs" />
+    <Compile Include="Assets\Scripts\Database\Models\UserModel.cs" />
+    <Compile Include="Assets\Scripts\Database\Models\WordCategoryModel.cs" />
+    <Compile Include="Assets\Scripts\Database\Models\WordProgressModel.cs" />
+    <Compile Include="Assets\Scripts\Database\Models\SessionResultModel.cs" />
+    <Compile Include="Assets\Scripts\Database\SQLiteHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
