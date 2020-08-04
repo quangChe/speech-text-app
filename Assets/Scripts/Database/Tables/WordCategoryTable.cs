@@ -24,7 +24,7 @@ namespace Database
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     {USER_ID} INTEGER DEFAULT 0,
                     {CATEGORY_NAME} STRING DEFAULT NULL, 
-                    {STARS_COLLECTED} INTEGER   DEFAULT 0,
+                    {STARS_COLLECTED} INTEGER DEFAULT 0,
                     FOREIGN KEY({USER_ID}) REFERENCES Users(id) ON DELETE CASCADE
                 );";
             cmd.ExecuteNonQuery();
