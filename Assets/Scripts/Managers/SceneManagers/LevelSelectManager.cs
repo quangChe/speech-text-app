@@ -51,30 +51,31 @@ public class LevelSelectManager : MonoBehaviour
         SetContainerDimensions();
     }
 
-    private void PlaceItemOnUI(int index)
+    private void PlaceItemOnUI(int itemIndex)
     {
         RectTransform itemRect = itemToAdjust.GetComponent<RectTransform>();
         itemRect.localPosition = new Vector2(
-            (itemRect.rect.width * index) + itemRect.localPosition.x,
+            (itemRect.rect.width * itemIndex) + itemRect.localPosition.x,
             itemRect.localPosition.y);
     }
 
-    private void SetItemView(int index)
+    private void SetItemView(int itemIndex)
     {
         int playerStars = gm.player.totalStars;
         LevelItemController levelItemCtrl = itemToAdjust.GetComponent<LevelItemController>();
-        levelItemCtrl.SetTitle(levelCategories[index].categoryName);
+        levelItemCtrl.SetTitle(levelCategories[itemIndex].categoryName);
 
 
-        if (playerStars >= levelRequirements[levelCategories[index].categoryName])
+        if (playerStars >= levelRequirements[levelCategories[itemIndex].categoryName])
         {
             levelItemCtrl.UnlockLevel();
-            int starsToCollect = gm.fullWordList[levelCategories[index].categoryName].Length * 3;
-            levelItemCtrl.SetStarInfo(levelCategories[index].starsCollected, starsToCollect);
+            int starsCollected = levelCategories[itemIndex].starsCollected;
+            int starsToCollect = gm.fullWordList[levelCategories[itemIndex].categoryName].Length * 3;
+            levelItemCtrl.SetStarInfo(starsCollected, starsToCollect);
         }
         else
         {
-            levelItemCtrl.SetLockInfo(levelRequirements[levelCategories[index].categoryName]);
+            levelItemCtrl.SetLockInfo(levelRequirements[levelCategories[itemIndex].categoryName]);
         }
     }
 

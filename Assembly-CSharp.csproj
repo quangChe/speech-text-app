@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Controllers\SlidingSyllablesController.cs" />
     <Compile Include="Assets\Scripts\Controllers\SlidingWordController.cs" />
     <Compile Include="Assets\Scripts\Controllers\TapAnimationController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\WordSelectionController.cs" />
     <Compile Include="Assets\Scripts\Controllers\WordShredController.cs" />
     <Compile Include="Assets\Scripts\Controllers\WordSpawnController.cs" />
     <Compile Include="Assets\Scripts\Database\DatabaseHelper.cs" />

@@ -50,8 +50,12 @@ public class GameManager : Singleton<GameManager>
 
     public void SetSelectedWordList(string categoryName)
     {
-        Debug.Log(categoryName);
         selectedWordList = fullWordList[categoryName];
+    }
+
+    public WordProgressModel GetWordProgressData(string word)
+    {
+        return db.WordProgress.Find((wp) => wp.word == word);
     }
 
     public List<WordCategoryModel> GetWordCategories()
