@@ -10,13 +10,11 @@ public class GameManager : Singleton<GameManager>
     }
 
     [System.NonSerialized] public Dictionary<string, string[]> fullWordList;
-
     [System.NonSerialized] public string[] selectedWordList = null;
-
     [System.NonSerialized] public DatabaseHelper db;
-
     [System.NonSerialized] public UserModel player;
-
+    [System.NonSerialized] public string selectedWord;
+    
 
     protected override void OnAwake()
     {
@@ -56,6 +54,11 @@ public class GameManager : Singleton<GameManager>
     public WordProgressModel GetWordProgressData(string word)
     {
         return db.WordProgress.Find((wp) => wp.word == word);
+    }
+
+    public void SetSelectedWord(string word)
+    {
+        selectedWord = word;
     }
 
     public List<WordCategoryModel> GetWordCategories()

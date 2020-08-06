@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class PrepManager : MonoBehaviour
 {
     public GameObject wordSelectionPrefab;
     public GameObject wordListContainer;
+    public TextMeshProUGUI videoLabel;
 
     private GameManager gm;
     private string[] wordList;
@@ -28,7 +31,8 @@ public class PrepManager : MonoBehaviour
         {
             currentWord = Instantiate(wordSelectionPrefab, wordListContainer.transform);
             AlignWordSelectionItem(wordIndex);
-            WordProgressModel wordProgress = gm.GetWordProgressData(wordList[wordIndex]);
+            InitializeWordButton(wordIndex);
+            
         }
     }
 
@@ -37,6 +41,23 @@ public class PrepManager : MonoBehaviour
         RectTransform itemRect = currentWord.GetComponent<RectTransform>();
         itemRect.localPosition = new Vector2(
             itemRect.localPosition.x,
-            (itemRect.rect.height * wordIndex) + itemRect.localPosition.y);
+            itemRect.localPosition.y - (itemRect.rect.height * wordIndex));
+    }
+
+    private void InitializeWordButton(int wordIndex)
+    {
+        WordProgressModel wordProgress = gm.GetWordProgressData(wordList[wordIndex]);
+        currentWord.GetComponent<WordSelectionController>().SetWordProgress(wordProgress);
+        currentWord.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            string selectedWord = wordList[wordIndex];
+            gm.SetSelectedWord(selectedWord);
+            SetVideoDetails(selectedWord);
+        });
+    }
+
+    private void SetVideoDetails(string word)
+    {
+        videoLabel.SetText(word);
     }
 }

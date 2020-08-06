@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{272F9E6D-BF2A-4DAF-3932-E11B456B3AA0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/SceneManagers/PrepManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/GameplayInfoController.cs">
     <Files>
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="58" Column="62" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="59" Column="28" />
       <File FileName="Assets/Scripts/Managers/SceneManagers/NewMonoBehaviour.cs" Line="56" Column="9" />
-      <File FileName="Assets/Scripts/Managers/SceneManagers/PrepSceneManager.cs" Line="33" Column="56" />
+      <File FileName="Assets/Scripts/Managers/SceneManagers/PrepSceneManager.cs" Line="10" Column="39" />
       <File FileName="Assets/Scripts/Database/DatabaseHelper.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Database/SQLiteHelper.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controllers/LevelItemController.cs" Line="31" Column="45" />
       <File FileName="Assets/Scripts/Controllers/SceneController.cs" Line="20" Column="45" />
-      <File FileName="Assets/Scripts/Controllers/WordSelectionController.cs" Line="6" Column="2" />
+      <File FileName="Assets/Scripts/Controllers/WordSelectionController.cs" Line="14" Column="32" />
+      <File FileName="Assets/Scripts/Controllers/WordSpawnController.cs" Line="12" Column="34" />
+      <File FileName="Assets/Scripts/Controllers/GameplayInfoController.cs" Line="28" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,12 +20,12 @@
               <Node name="Plugins" expanded="True" />
               <Node name="Resources" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="Controllers" expanded="True" />
+                <Node name="Controllers" expanded="True">
+                  <Node name="GameplayInfoController.cs" selected="True" />
+                </Node>
                 <Node name="Database" expanded="True" />
                 <Node name="Managers" expanded="True">
-                  <Node name="SceneManagers" expanded="True">
-                    <Node name="PrepManager.cs" selected="True" />
-                  </Node>
+                  <Node name="SceneManagers" expanded="True" />
                 </Node>
               </Node>
             </Node>

@@ -11,7 +11,7 @@ public class GameplayInfoController : MonoBehaviour
     public TextMeshProUGUI timeDisplay;
     public TextMeshProUGUI timeTargetDisplay;
 
-    private float timer;
+    private float timer = 0f;
     private int hits;
     private int hitTarget;
     private int time;

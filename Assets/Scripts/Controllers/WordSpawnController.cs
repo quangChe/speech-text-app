@@ -8,7 +8,9 @@ public class WordSpawnController : MonoBehaviour
     public GameObject fretBoard;
     public GameObject slidingWordPrefab;
     public GameObject slidingSyllablesPrefab;
+
     private GameObject wordClone;
+    private GameManager gm;
 
 
     private void SpawnSingleSyllableWord(string word)
@@ -55,13 +57,6 @@ public class WordSpawnController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("1"))
-        {
-            SpawnSingleSyllableWord("hi");
-        } else if (Input.GetKeyDown("2"))
-        {
-            SpawnMultiSyllableWord("va-ca-tion");
-        }
-
+        
     }
 }
