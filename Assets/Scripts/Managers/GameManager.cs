@@ -48,29 +48,10 @@ public class GameManager : Singleton<GameManager>
         return fullWordList;
     }
 
-    public void SetSelectedWordList(WordListCategories category)
+    public void SetSelectedWordList(string categoryName)
     {
-        switch (category)
-        {
-            case WordListCategories.SingleSyllables:
-                selectedWordList = fullWordList["Single Syllable"];
-                break;
-            case WordListCategories.MutiSyllables:
-                selectedWordList = fullWordList["Multi Syllable"];
-                break;
-            case WordListCategories.EasyPhrases:
-                selectedWordList = fullWordList["Easy Phrases"];
-                break;
-            case WordListCategories.MediumPhrases:
-                selectedWordList = fullWordList["Medium Phrases"];
-                break;
-            case WordListCategories.HardPhrases:
-                selectedWordList = fullWordList["Hard Phrases"];
-                break;
-            default:
-                selectedWordList = null;
-                break;
-        }
+        Debug.Log(categoryName);
+        selectedWordList = fullWordList[categoryName];
     }
 
     public List<WordCategoryModel> GetWordCategories()

@@ -12,6 +12,8 @@ public class LevelSelectManager : MonoBehaviour
     private Dictionary<string, int> levelRequirements = new Dictionary<string, int>();
     private int starsRequiredPerLevel = 30;
 
+    private GameObject itemToAdjust;
+
     // Use this for initialization
     void Start()
     {
@@ -33,26 +35,52 @@ public class LevelSelectManager : MonoBehaviour
         foreach (WordCategoryModel category in levelCategories)
         {
             levelRequirements.Add(category.categoryName, starCounter);
-            starCounter += starsRequiredPerLevel;
+            starCounter = starCounter + starsRequiredPerLevel;
         }
     }
 
     private void GenerateLevelItems()
     {
-        int playerStars = gm.player.totalStars;
-        float itemWidth = 0;
-
-        for (int i = 0; i < levelCategories.Count; i++) 
+        for (int itemIndex = 0; itemIndex < levelCategories.Count; itemIndex++) 
         {
-            GameObject levelItem = Instantiate(levelItemPrefab, levelItemsContainer.transform);
-            RectTransform itemRect = levelItem.GetComponent<RectTransform>();
-            itemRect.localPosition = new Vector2(
-                (itemRect.rect.width * i) + itemRect.localPosition.x,
-                itemRect.localPosition.y);
-
-            itemWidth = itemRect.rect.width;
+            itemToAdjust = Instantiate(levelItemPrefab, levelItemsContainer.transform);
+            PlaceItemOnUI(itemIndex);
+            SetItemView(itemIndex);
         }
 
+        SetContainerDimensions();
+    }
+
+    private void PlaceItemOnUI(int index)
+    {
+        RectTransform itemRect = itemToAdjust.GetComponent<RectTransform>();
+        itemRect.localPosition = new Vector2(
+            (itemRect.rect.width * index) + itemRect.localPosition.x,
+            itemRect.localPosition.y);
+    }
+
+    private void SetItemView(int index)
+    {
+        int playerStars = gm.player.totalStars;
+        LevelItemController levelItemCtrl = itemToAdjust.GetComponent<LevelItemController>();
+        levelItemCtrl.SetTitle(levelCategories[index].categoryName);
+
+
+        if (playerStars >= levelRequirements[levelCategories[index].categoryName])
+        {
+            levelItemCtrl.UnlockLevel();
+            int starsToCollect = gm.fullWordList[levelCategories[index].categoryName].Length * 3;
+            levelItemCtrl.SetStarInfo(levelCategories[index].starsCollected, starsToCollect);
+        }
+        else
+        {
+            levelItemCtrl.SetLockInfo(levelRequirements[levelCategories[index].categoryName]);
+        }
+    }
+
+    private void SetContainerDimensions()
+    {
+        float itemWidth = itemToAdjust.GetComponent<RectTransform>().rect.width;
         RectTransform containerRect = levelItemsContainer.GetComponent<RectTransform>();
         RectTransform containerParentRect = containerRect.parent.GetComponent<RectTransform>();
         containerRect.sizeDelta = new Vector2(itemWidth * levelCategories.Count,

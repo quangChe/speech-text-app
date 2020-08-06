@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Common\Singleton.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameplayInfoController.cs" />
     <Compile Include="Assets\Scripts\Controllers\HitBoxController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\LevelItemController.cs" />
     <Compile Include="Assets\Scripts\Controllers\MicrophoneController.cs" />
     <Compile Include="Assets\Scripts\Controllers\SceneController.cs" />
     <Compile Include="Assets\Scripts\Controllers\SlidingSyllablesController.cs" />
