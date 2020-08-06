@@ -26,7 +26,10 @@ public class LevelItemController : MonoBehaviour
     public void SetTitle(string categoryName)
     {
         title.SetText(categoryName);
-        
+        buttonComponent.onClick.AddListener(() => {
+            gm.SetSelectedWordList(categoryName);
+            sceneController.GoToPrepScene();
+        });
     }
 
     public void SetLockInfo(int starsRequired)

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PrepSceneManager : MonoBehaviour
+public class PrepManager : MonoBehaviour
 {
     void Start()
     {

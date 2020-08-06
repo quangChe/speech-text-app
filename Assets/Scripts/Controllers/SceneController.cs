@@ -14,4 +14,9 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene");
     }
+
+    public void GoToPrepScene()
+    {
+        SceneManager.LoadScene("PrepScene");
+    }
 }
