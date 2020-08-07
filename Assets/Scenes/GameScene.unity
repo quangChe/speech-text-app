@@ -658,7 +658,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gameplayInfoManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 524239834}
     - target: {fileID: 5232503248311992325, guid: 129aa58a9345b4072bc6aebae2f81f7c,
         type: 3}
       propertyPath: decibalText

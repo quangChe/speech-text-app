@@ -5,16 +5,12 @@ using Newtonsoft.Json;
 
 public class GameManager : Singleton<GameManager>
 {
-    public enum WordListCategories {
-        SingleSyllables, MutiSyllables, EasyPhrases, MediumPhrases, HardPhrases
-    }
-
     [System.NonSerialized] public Dictionary<string, string[]> fullWordList;
     [System.NonSerialized] public string[] selectedWordList = null;
     [System.NonSerialized] public DatabaseHelper db;
     [System.NonSerialized] public UserModel player;
     [System.NonSerialized] public string selectedWord;
-    
+    [System.NonSerialized] public string selectedWordCategory;
 
     protected override void OnAwake()
     {
@@ -56,9 +52,13 @@ public class GameManager : Singleton<GameManager>
         return db.WordProgress.Find((wp) => wp.word == word);
     }
 
-    public void SetSelectedWord(string word)
+    public void SetSelectedWord(WordProgressModel word)
     {
-        selectedWord = word;
+        selectedWord = word.word;
+        WordCategoryModel categoryFound = db.WordCategories.Find(
+            (cat) => cat.id == word.categoryId);
+        Debug.Log(categoryFound);
+        selectedWordCategory = categoryFound.categoryName;
     }
 
     public List<WordCategoryModel> GetWordCategories()

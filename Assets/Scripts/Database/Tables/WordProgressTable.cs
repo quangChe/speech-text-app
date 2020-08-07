@@ -45,14 +45,16 @@ namespace Database
                     {WORD},
                     {TIMES_HIT},
                     {TIMES_ATTEMPTED},
-                    {USER_ID}
+                    {USER_ID},
+                    {CATEGORY_ID}
                 )
                 VALUES
                 (
                     '{wordProgress.word}',
                     {wordProgress.timesHit},
                     {wordProgress.timesAttempted},
-                    {wordProgress.userId}
+                    {wordProgress.userId},
+                    {wordProgress.categoryId}
                 );";
             cmd.ExecuteNonQuery();
         }

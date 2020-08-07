@@ -81,6 +81,8 @@ public class DatabaseHelper
     {
         foreach (WordCategoryModel category in WordCategories)
         {
+            Debug.Log(category.id);
+
             foreach (string word in WordDict[category.categoryName])
             {
                 wordProgress.Create(new WordProgressModel {

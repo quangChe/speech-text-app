@@ -52,7 +52,7 @@ public class PrepManager : MonoBehaviour
         currentWord.GetComponent<Button>().onClick.AddListener(() =>
         {
             string selectedWord = wordList[wordIndex];
-            gm.SetSelectedWord(selectedWord);
+            gm.SetSelectedWord(wordProgress);
             SetVideoDetails(selectedWord);
         });
     }
