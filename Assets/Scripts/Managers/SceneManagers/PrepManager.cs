@@ -32,8 +32,9 @@ public class PrepManager : MonoBehaviour
             currentWord = Instantiate(wordSelectionPrefab, wordListContainer.transform);
             AlignWordSelectionItem(wordIndex);
             InitializeWordButton(wordIndex);
-            
         }
+
+        SetWordListHeight();
     }
 
     private void AlignWordSelectionItem(int wordIndex)
@@ -55,9 +56,20 @@ public class PrepManager : MonoBehaviour
             SetVideoDetails(selectedWord);
         });
     }
-
+   
     private void SetVideoDetails(string word)
     {
         videoLabel.SetText(word);
+    }
+
+    private void SetWordListHeight()
+    {
+        float itemHeight = currentWord.GetComponent<RectTransform>().rect.height;
+        RectTransform containerRect = wordListContainer.GetComponent<RectTransform>();
+        RectTransform containerParentRect = containerRect.parent.GetComponent<RectTransform>();
+        containerRect.sizeDelta = new Vector2(containerRect.rect.width,
+            itemHeight * wordList.Length);
+        containerRect.localPosition = new Vector2(containerRect.localPosition.x,
+            containerRect.localPosition.y - (containerParentRect.rect.height + containerRect.rect.height));
     }
 }
